@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo Nacional Centro de Arte Reina Sofía - The Teen's Guide to Modern Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            font-size: 11.2px;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            page-break-after: always;
+        }
+
+        .cover-page h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .cover-page h2 {
+            font-size: 2rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* Artwork Pages */
+        .artwork-page {
+            padding: 1.25rem 1.5rem;
+            page-break-after: always;
+            min-height: 100vh;
+        }
+
+        /* Top Section: Info + Image */
+        .top-section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1rem;
+            align-items: start;
+        }
+
+        .artwork-header {
+            padding-bottom: 0.5rem;
+        }
+
+        .image-container {
+            text-align: left;
+        }
+
+        .artwork-image {
+            max-height: 180px;
+            width: auto;
+            border: 3px solid #1f2937;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .artwork-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.56rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            background: linear-gradient(90deg, #8B0000 0%, #DC2626 50%, #F97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            line-height: 1.2;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+        }
+
+        .artist-info {
+            font-size: 1.08rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .location-box {
+            margin-top: 0.5rem;
+            font-size: 1.08rem;
+            color: #ea580c;
+        }
+
+        .location-box strong {
+            color: #ea580c;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        /* Section Boxes */
+        .section {
+            border-left: 3px solid #ccc;
+            padding: 0.65rem 0.75rem;
+            background-color: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .section-header {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .section-emoji {
+            font-size: 0.88rem;
+        }
+
+        .section.what-makes-cool {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.what-makes-cool .section-header {
+            color: #ea580c;
+        }
+
+        .section.did-you-notice {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.did-you-notice .section-header {
+            color: #ea580c;
+        }
+
+        .section.mind-blown {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.mind-blown .section-header {
+            color: #ea580c;
+        }
+
+        .section.observation {
+            border-left-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+
+        .section.observation .section-header {
+            color: #1d4ed8;
+        }
+
+        .section-subtitle {
+            font-size: 0.64rem;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 0.35rem;
+        }
+
+        /* List Items */
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section li {
+            margin-bottom: 0.35rem;
+            padding-left: 1.25rem;
+            position: relative;
+            font-size: 0.74rem;
+        }
+
+        .section.what-makes-cool li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #ea580c;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 0.74rem;
+        }
+
+        /* Checkbox Items */
+        .checkbox-item {
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+            padding-left: 0 !important;
+            font-size: 0.74rem;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border: 2px solid #9ca3af;
+            border-radius: 50%;
+            margin-top: 2px;
+            background-color: white;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .cover-page,
+            .artwork-page {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            .artwork-image {
+                max-height: 180px !important;
+                max-width: 300px !important;
+                object-fit: contain;
+            }
+
+            .artwork-title {
+                background: none !important;
+                -webkit-text-fill-color: #8B0000 !important;
+                color: #8B0000 !important;
+            }
+        }
+
+        @page {
+            size: letter;
+            margin: 0.4in 0.5in;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover-page">
+        <h1>Museo Nacional Centro de Arte Reina Sofía</h1>
+        <h2>The Teen's Guide to Modern Art</h2>
+    </div>
+
+    <!-- Artwork Pages -->
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg" alt="Guernica" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">1.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">Guernica</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Pablo Picasso (1881-1973)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 206
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>It's HUGE! Over 11 feet tall and 25 feet wide – it practically swallows you whole.</li>
+                    
+                    <li>Painted in just a few weeks in 1937 as a protest against the bombing of a Spanish town during the Civil War.</li>
+                    
+                    <li>It's like a giant, angry newspaper photo, but painted. Picasso used only black, white, and grey to make it feel like a news report.</li>
+                    
+                    <li>Considered one of the most powerful anti-war paintings ever made. It screams without making a sound.</li>
+                    
+                    <li>It's a masterpiece of Cubism, where everything is broken up and reassembled to show chaos and pain.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The screaming horse in the center, pierced by a spear – it's a symbol of innocent suffering.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A bull on the left, often seen as a symbol of brutality or the Spanish people.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A mother crying over her dead baby, a classic image of war's horror.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The harsh, bare light bulb at the top, like an eye or a bomb exploding, illuminating the terror.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A figure trapped in a burning building, arms raised in despair.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The broken sword near the bottom, showing the futility of resistance.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Picasso refused to let Guernica be shown in Spain until democracy was restored. It traveled the world for decades before finally coming home in 1981.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>When a Nazi officer asked Picasso, 'Did you do that?', Picasso famously replied, 'No, you did.'</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The painting is so big, it was originally designed to fit a specific wall in the Spanish Pavilion at the 1937 Paris International Exposition.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>It's not just about Guernica; it's a universal cry against all wars and violence, making it relevant even today.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find at least three different screaming faces in the painting.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Can you spot the hidden skull formed by the horse's head and arm?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look closely at the textures – how does Picasso make things look sharp, soft, or broken?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Imagine the sounds in this painting. What do you hear?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If you could ask Picasso one question about this painting, what would it be?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Pablo_Picasso%2C_1901%2C_Femme_en_bleu_%28Woman_in_Blue%29%2C_oil_on_canvas%2C_130_x_100_cm%2C_Museo_Nacional_Centro_de_Arte_Reina_Sof%C3%ADa%2C_Madrid.jpg/800px-Pablo_Picasso%2C_1901%2C_Femme_en_bleu_%28Woman_in_Blue%29%2C_oil_on_canvas%2C_130_x_100_cm%2C_Museo_Nacional_Centro_de_Arte_Reina_Sof%C3%ADa%2C_Madrid.jpg" alt="Woman in Blue" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">2.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">Woman</span>
+                        
+                    
+                        
+                            <span class="title-main">in</span>
+                        
+                    
+                        
+                            <span class="title-main">Blue</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Pablo Picasso (1881-1973)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Various Galleries
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>It's from Picasso's famous 'Blue Period' – everything is painted in shades of blue and blue-green!</li>
+                    
+                    <li>This was a tough time for Picasso, so the painting feels a bit sad and thoughtful.</li>
+                    
+                    <li>It's a portrait of a mysterious woman, maybe someone he knew, or just a symbol of the poor people he painted then.</li>
+                    
+                    <li>Even though it's not his super-famous Cubist style, you can see how he was already experimenting with art.</li>
+                    
+                    <li>It shows how powerful colors can be to express feelings without words.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The way the blue colors make the woman seem a bit ghostly or dreamlike.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Her posture and expression – she looks deep in thought, maybe a little lonely.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The simple background helps you focus all your attention on her.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look at her hands and face – they're painted with a lot of emotion.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The way the light seems to gently fall on her, highlighting her features.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Picasso was only in his early 20s when he painted this, showing how talented he was even before he became super famous.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The 'Blue Period' was a turning point for him, where he started to paint more about human suffering and emotion.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting is a quiet moment before he exploded into the art world with Cubism and other wild styles.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>It reminds us that even great artists have periods of sadness and reflection.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What emotions do you feel when you look at this painting?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If this painting had a soundtrack, what kind of music would it be?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Try to imagine what the woman is thinking or dreaming about.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How does the color blue make you feel?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What details make this painting feel both beautiful and a little sad?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Joan_Mir%C3%B3_-_The_House_of_the_Palm_Tree.jpg/800px-Joan_Mir%C3%B3_-_The_House_of_the_Palm_Tree.jpg" alt="The House of the Palm Tree" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">3.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">House</span>
+                        
+                    
+                        
+                            <span class="title-main">of</span>
+                        
+                    
+                        
+                            <span class="title-main">the</span>
+                        
+                    
+                        
+                            <span class="title-main">Palm</span>
+                        
+                    
+                        
+                            <span class="title-main">Tree</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Joan Miró (1893-1983)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Various Galleries
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Miró's early work, painted before he went full-on surrealist and abstract.</li>
+                    
+                    <li>It's a landscape, but not like a photo. Miró was already playing with how he saw the world.</li>
+                    
+                    <li>You can see real objects, but they're simplified, almost like symbols or hieroglyphs.</li>
+                    
+                    <li>It shows his connection to his home in Catalonia, Spain, before he moved to Paris.</li>
+                    
+                    <li>It's a peek into the mind of an artist who would later become super famous for his dreamlike paintings.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The palm tree isn't super realistic, but you definitely know it's a palm tree.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The colors are bright and earthy, reflecting the Mediterranean landscape.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The lines are clear and precise, almost like a drawing.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>There's a sense of calm and order, even though it's not a perfect copy of reality.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look for the small details that make up the house and the surrounding nature.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Miró said he wanted to 'assassinate painting' – meaning he wanted to break all the traditional rules and create something totally new.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting is a bridge between traditional art and the wild, imaginative art he would create later.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>He was inspired by Catalan folk art and Romanesque frescoes, which you can sometimes see in his simplified forms.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Even though it looks simple, every element is carefully placed and thought out.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If you were to draw this scene, how would you simplify the objects?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What feelings do the colors evoke in you?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Can you find any hidden faces or creatures in the landscape?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Imagine what it would be like to live in that house. What sounds would you hear?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How is this painting different from a photograph of a house and a palm tree?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Salvador_Dal%C3%AD%2C_1925%2C_Figure_at_a_Window.jpg/800px-Salvador_Dal%C3%AD%2C_1925%2C_Figure_at_a_Window.jpg" alt="Figure at a Window" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">4.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">Figure</span>
+                        
+                    
+                        
+                            <span class="title-main">at</span>
+                        
+                    
+                        
+                            <span class="title-main">a</span>
+                        
+                    
+                        
+                            <span class="title-main">Window</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Salvador Dalí (1904-1989)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Various Galleries
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>This is Dalí before he got super weird and surreal! It's a glimpse into his early, more traditional style.</li>
+                    
+                    <li>It's a portrait of his sister, Ana María, looking out over the sea in Cadaqués, Spain.</li>
+                    
+                    <li>Even though it's realistic, there's a sense of mystery and quiet contemplation.</li>
+                    
+                    <li>Dalí was a master of light and shadow, and you can see that skill even in this early work.</li>
+                    
+                    <li>It shows that even the most avant-garde artists often start with strong foundational skills.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The beautiful blue tones of the sea and sky, almost blending together.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The way the light hits her back, making her almost glow.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Her posture is relaxed, but also a bit distant, like she's lost in thought.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The simple, uncluttered room, drawing your eye to the window and the view.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The delicate folds of her dress and the way her hair is styled.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Dalí and his sister had a complicated relationship later in life, making this early, serene portrait even more poignant.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting was made when Dalí was only 21 years old, showing his incredible talent from a young age.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>It's a moment of calm before the storm of his famous surrealist works, which would shock the art world.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The view from the window is a real place, a landscape that inspired many of Dalí's works.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What do you think she's looking at or thinking about?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How does the light in the painting make you feel?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If you were in that room, what sounds would you hear?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Compare this to a later, more famous Dalí painting. How is his style different?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What details make this painting feel peaceful or serene?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/The_Great_Masturbator.jpg/800px-The_Great_Masturbator.jpg" alt="The Great Masturbator" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">5.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Great</span>
+                        
+                    
+                        
+                            <span class="title-main">Masturbator</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Salvador Dalí (1904-1989)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Various Galleries
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>This is Dalí at his most surreal and mind-bending! It's like a dream (or nightmare) painted on canvas.</li>
+                    
+                    <li>It's full of strange symbols and creatures that come straight from Dalí's subconscious mind.</li>
+                    
+                    <li>The giant, soft, rock-like head in the center is actually a self-portrait of Dalí himself, but distorted.</li>
+                    
+                    <li>It explores themes of desire, anxiety, and the weirdness of the human mind.</li>
+                    
+                    <li>Dalí was a master at making impossible things look incredibly real, which makes it even more unsettling.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The grasshopper clinging to the face – Dalí had a phobia of grasshoppers!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The ants crawling on the figure, symbolizing decay and death.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The lion's head, which can represent desire or aggression.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The female figure embracing the distorted male figure, thought to be Gala, Dalí's wife and muse.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The vast, empty landscape in the background, adding to the dreamlike atmosphere.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The title itself was super controversial and shocking when it was first shown, but Dalí loved to provoke!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Dalí claimed he painted this after a vivid dream, trying to capture the exact images from his subconscious.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>He was incredibly precise in his painting technique, making the bizarre elements seem hyper-realistic.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting is a deep dive into Dalí's personal fears, desires, and obsessions.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What's the first thing that confuses or surprises you in this painting?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If this painting were a sound, what would it be?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Try to describe the texture of the giant head. Is it soft, hard, gooey?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What emotions does this painting evoke in you?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Can you find any other hidden symbols or creatures in the painting?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Juan_Gris%2C_1914%2C_Bottle_of_Anis_del_Mono.jpg/800px-Juan_Gris%2C_1914%2C_Bottle_of_Anis_del_Mono.jpg" alt="The Bottle of Anís del Mono" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">6.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Bottle</span>
+                        
+                    
+                        
+                            <span class="title-main">of</span>
+                        
+                    
+                        
+                            <span class="title-main">Anís</span>
+                        
+                    
+                        
+                            <span class="title-main">del</span>
+                        
+                    
+                        
+                            <span class="title-main">Mono</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Juan Gris (1887-1927)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Various Galleries
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>This is Cubism! Juan Gris was one of the OGs, right up there with Picasso and Braque.</li>
+                    
+                    <li>It takes an everyday object – a bottle of Spanish liqueur – and breaks it into a million pieces, then puts it back together in a new way.</li>
+                    
+                    <li>It's like looking at something from all angles at once, even though it's a flat painting.</li>
+                    
+                    <li>Gris was known for his 'Synthetic Cubism,' which means he built up forms from different shapes and textures.</li>
+                    
+                    <li>It's a puzzle for your eyes and brain – trying to figure out what you're seeing.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>You can still recognize the bottle, even though it's fragmented.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The label for 'Anís del Mono' (Anise of the Monkey) is visible, but also broken up.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The use of different textures and patterns, like wood grain or newspaper print (even if it's painted to look like it).</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The colors are often muted, focusing more on form and structure.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look for the way light and shadow are used to create depth in a flat image.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Cubism completely changed how people thought about art and reality. It was super revolutionary!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Gris was very systematic in his approach to Cubism, almost like a scientist dissecting an object.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The 'Anís del Mono' bottle was a common sight in Spain, so Gris was taking something familiar and making it totally new.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting isn't just about seeing; it's about *knowing* an object from multiple perspectives.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Can you identify all the parts of the bottle?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How many different textures or patterns can you find?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If you could touch this painting, what would it feel like?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Try to imagine the bottle as a 3D object based on the fragmented view.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What other objects do you think could be painted in this Cubist style?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Joan_Mir%C3%B3_-_The_Laugh.jpg/800px-Joan_Mir%C3%B3_-_The_Laugh.jpg" alt="The Laugh" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">7.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Laugh</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Joan Miró (1893-1983)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Various Galleries
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Miró's art is like a playground for your imagination! This painting is all about joy and playfulness.</li>
+                    
+                    <li>It's abstract, so there's no 'right' way to see it. You get to decide what it means to you.</li>
+                    
+                    <li>Miró used bright, primary colors and simple shapes, almost like a child's drawing, but with deep meaning.</li>
+                    
+                    <li>He was part of the Surrealist movement, trying to capture dreams and the subconscious mind.</li>
+                    
+                    <li>It's a reminder that art doesn't always have to be serious; it can be fun and make you smile.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The bold, black lines that define the shapes – they're almost like doodles.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The vibrant colors: reds, yellows, blues, and greens that pop off the canvas.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The way the shapes seem to float and dance across the painting.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look for any figures or creatures you can imagine within the abstract forms.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The sense of movement and energy, even though it's a still painting.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Miró believed that art should be 'innocent' and spontaneous, like a child's drawing, but with the wisdom of an adult.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>He often started his paintings by just making random marks and then letting his imagination take over.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting might be a celebration of freedom and breaking away from traditional art rules.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Miró's work often has a connection to the cosmos and nature, even in his abstract pieces.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What kind of laugh do you hear when you look at this painting – a giggle, a chuckle, a roar?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If this painting were music, what would it sound like?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Try to draw your own 'laugh' using only abstract shapes and colors.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What emotions does this painting evoke in you?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Can you find a 'face' or an 'eye' hidden in the shapes?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Joan_Mir%C3%B3_-_The_Snail%2C_the_Woman%2C_the_Flower_and_the_Star.jpg/800px-Joan_Mir%C3%B3_-_The_Snail%2C_the_Woman%2C_the_Flower_and_the_Star.jpg" alt="The Snail, the Woman, the Flower and the Star" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">8.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Snail,</span>
+                        
+                    
+                        
+                            <span class="title-main">the</span>
+                        
+                    
+                        
+                            <span class="title-main">Woman,</span>
+                        
+                    
+                        
+                            <span class="title-main">the</span>
+                        
+                    
+                        
+                            <span class="title-main">Flower</span>
+                        
+                    
+                        
+                            <span class="title-main">and</span>
+                        
+                    
+                        
+                            <span class="title-main">the</span>
+                        
+                    
+                        
+                            <span class="title-main">Star</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Joan Miró (1893-1983)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Various Galleries
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>This is a super famous Miró series! He made a bunch of these 'Constellations' during World War II, as a way to escape the darkness of the world.</li>
+                    
+                    <li>It's like a secret code or a dream map, full of symbols and strange creatures.</li>
+                    
+                    <li>Miró was inspired by the night sky, music, and poetry when he made these.</li>
+                    
+                    <li>The title itself is like a poem, bringing together everyday things with cosmic ideas.</li>
+                    
+                    <li>It's a reminder that even in tough times, art can bring beauty and hope.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The bold, black lines that connect everything, like a spiderweb or a constellation.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The bright, primary colors that pop against the background.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The simplified shapes of the snail, woman, flower, and star – they're not realistic, but you can still recognize them.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look for the tiny details and patterns that Miró added, almost like hidden messages.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The sense of balance and harmony, even with all the different elements.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Miró created these 'Constellations' on paper, often while traveling, and they were a huge hit when they were first shown.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>He believed that art should be universal, understood by everyone, no matter their background.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The 'star' in his paintings often represents a guiding light or a spiritual journey.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This series helped establish Miró as one of the most important artists of the 20th century.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Can you find all four elements from the title: the snail, the woman, the flower, and the star?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If this painting were a story, what would it be about?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Try to create your own 'constellation' using simple shapes and lines.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What emotions does this painting evoke in you?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How does Miró make simple shapes feel so alive and full of meaning?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Juan_Gris_-_The_Table_with_the_Guitar.jpg/800px-Juan_Gris_-_The_Table_with_the_Guitar.jpg" alt="The Table with the Guitar" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">9.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Table</span>
+                        
+                    
+                        
+                            <span class="title-main">with</span>
+                        
+                    
+                        
+                            <span class="title-main">the</span>
+                        
+                    
+                        
+                            <span class="title-main">Guitar</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Juan Gris (1887-1927)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Various Galleries
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Another awesome example of Cubism by Juan Gris! He loved taking everyday objects and turning them into mind-bending puzzles.</li>
+                    
+                    <li>This painting is like a musical instrument exploded and then carefully put back together in a new, abstract way.</li>
+                    
+                    <li>It's not just about seeing the guitar; it's about feeling its presence and its sound through shapes and colors.</li>
+                    
+                    <li>Gris was a master of 'Synthetic Cubism,' where he built up forms from different textures and patterns, almost like a collage.</li>
+                    
+                    <li>It challenges you to look beyond what's obvious and find beauty in the fragmented.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The different angles and perspectives of the guitar – you see it from the front, side, and even inside, all at once.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The way the table seems to tilt and shift, creating a dynamic composition.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The use of bold lines and geometric shapes to define the objects.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look for the subtle textures and patterns that suggest wood, strings, or other materials.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The limited color palette, often earthy tones, which helps focus on the forms.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Cubism was a radical art movement that completely changed how people thought about art and reality. It was super revolutionary!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Gris was very precise in his Cubist compositions, often planning them out with mathematical accuracy.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The guitar was a popular subject for Cubist artists because of its complex shape and its association with music and emotion.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting isn't just a still life; it's a meditation on the nature of perception and how we understand objects.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Can you identify all the parts of the guitar?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How many different perspectives of the table can you find?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If this painting were music, what kind of music would it be?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Try to imagine the guitar as a 3D object based on the fragmented view.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What other objects do you think would look cool painted in this Cubist style?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Marc_Chagall_-_The_Poet_%28Half_Past_Three%29.jpg/800px-Marc_Chagall_-_The_Poet_%28Half_Past_Three%29.jpg" alt="The Poet (Half Past Three)" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">10.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Poet</span>
+                        
+                    
+                        
+                            <span class="title-main">(Half</span>
+                        
+                    
+                        
+                            <span class="title-main">Past</span>
+                        
+                    
+                        
+                            <span class="title-main">Three)</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Marc Chagall (1887-1985)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Various Galleries
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Chagall's paintings are like dreams brought to life! This one is full of floating figures and vibrant colors.</li>
+                    
+                    <li>He often painted memories from his childhood in Russia, blending reality with fantasy.</li>
+                    
+                    <li>The title 'Half Past Three' adds a mysterious, almost magical element to the scene.</li>
+                    
+                    <li>Chagall was a master storyteller, and each of his paintings tells a unique, personal tale.</li>
+                    
+                    <li>It's a reminder that art can transport you to another world, full of wonder and imagination.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The poet figure, often seen as a self-portrait of Chagall himself, floating or upside down.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The vibrant, almost glowing colors that Chagall used – especially blues, greens, and reds.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The way different elements seem to defy gravity, like the floating figures or objects.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look for symbols that often appear in Chagall's work, like animals, musical instruments, or scenes from his hometown.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The sense of movement and fluidity, even though it's a still painting.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Chagall's art is often called 'poetic Cubism' or 'Symbolic Cubism' because he used elements of Cubism but filled them with personal meaning and emotion.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>He was one of the first artists to truly blend his Jewish heritage and Russian folklore into modern art.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting, like many of his, explores themes of love, memory, and spiritual longing.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Chagall believed that art should be a window into the soul, a way to express the deepest human emotions.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What do you think the poet is thinking or dreaming about?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If this painting were a song, what kind of song would it be?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Try to imagine yourself floating in this painting. What would you see and feel?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What emotions does this painting evoke in you?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Can you find any hidden messages or symbols in the painting?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

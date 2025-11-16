@@ -1,0 +1,367 @@
+{
+  "museum_name": "Museo Nacional Centro de Arte Reina Sofía",
+  "guide_title": "The Teen's Guide to Modern Art",
+  "artworks": [
+    {
+      "id": 1,
+      "title": "Guernica",
+      "artist": "Pablo Picasso",
+      "artist_years": "1881-1973",
+      "location": "Room 206",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg",
+      "source_url": "https://www.museoreinasofia.es/en/collection/artwork/guernica",
+      "what_makes_cool": [
+        "It's HUGE! Over 11 feet tall and 25 feet wide – it practically swallows you whole.",
+        "Painted in just a few weeks in 1937 as a protest against the bombing of a Spanish town during the Civil War.",
+        "It's like a giant, angry newspaper photo, but painted. Picasso used only black, white, and grey to make it feel like a news report.",
+        "Considered one of the most powerful anti-war paintings ever made. It screams without making a sound.",
+        "It's a masterpiece of Cubism, where everything is broken up and reassembled to show chaos and pain."
+      ],
+      "did_you_notice": [
+        "The screaming horse in the center, pierced by a spear – it's a symbol of innocent suffering.",
+        "A bull on the left, often seen as a symbol of brutality or the Spanish people.",
+        "A mother crying over her dead baby, a classic image of war's horror.",
+        "The harsh, bare light bulb at the top, like an eye or a bomb exploding, illuminating the terror.",
+        "A figure trapped in a burning building, arms raised in despair.",
+        "The broken sword near the bottom, showing the futility of resistance."
+      ],
+      "mind_blown": [
+        "Picasso refused to let Guernica be shown in Spain until democracy was restored. It traveled the world for decades before finally coming home in 1981.",
+        "When a Nazi officer asked Picasso, 'Did you do that?', Picasso famously replied, 'No, you did.'",
+        "The painting is so big, it was originally designed to fit a specific wall in the Spanish Pavilion at the 1937 Paris International Exposition.",
+        "It's not just about Guernica; it's a universal cry against all wars and violence, making it relevant even today."
+      ],
+      "observation_challenge": [
+        "Find at least three different screaming faces in the painting.",
+        "Can you spot the hidden skull formed by the horse's head and arm?",
+        "Look closely at the textures – how does Picasso make things look sharp, soft, or broken?",
+        "Imagine the sounds in this painting. What do you hear?",
+        "If you could ask Picasso one question about this painting, what would it be?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Woman in Blue",
+      "artist": "Pablo Picasso",
+      "artist_years": "1881-1973",
+      "location": "Various Galleries",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Pablo_Picasso%2C_1901%2C_Femme_en_bleu_%28Woman_in_Blue%29%2C_oil_on_canvas%2C_130_x_100_cm%2C_Museo_Nacional_Centro_de_Arte_Reina_Sof%C3%ADa%2C_Madrid.jpg/800px-Pablo_Picasso%2C_1901%2C_Femme_en_bleu_%28Woman_in_Blue%29%2C_oil_on_canvas%2C_130_x_100_cm%2C_Museo_Nacional_Centro_de_Arte_Reina_Sof%C3%ADa%2C_Madrid.jpg",
+      "source_url": "https://www.museoreinasofia.es",
+      "what_makes_cool": [
+        "It's from Picasso's famous 'Blue Period' – everything is painted in shades of blue and blue-green!",
+        "This was a tough time for Picasso, so the painting feels a bit sad and thoughtful.",
+        "It's a portrait of a mysterious woman, maybe someone he knew, or just a symbol of the poor people he painted then.",
+        "Even though it's not his super-famous Cubist style, you can see how he was already experimenting with art.",
+        "It shows how powerful colors can be to express feelings without words."
+      ],
+      "did_you_notice": [
+        "The way the blue colors make the woman seem a bit ghostly or dreamlike.",
+        "Her posture and expression – she looks deep in thought, maybe a little lonely.",
+        "The simple background helps you focus all your attention on her.",
+        "Look at her hands and face – they're painted with a lot of emotion.",
+        "The way the light seems to gently fall on her, highlighting her features."
+      ],
+      "mind_blown": [
+        "Picasso was only in his early 20s when he painted this, showing how talented he was even before he became super famous.",
+        "The 'Blue Period' was a turning point for him, where he started to paint more about human suffering and emotion.",
+        "This painting is a quiet moment before he exploded into the art world with Cubism and other wild styles.",
+        "It reminds us that even great artists have periods of sadness and reflection."
+      ],
+      "observation_challenge": [
+        "What emotions do you feel when you look at this painting?",
+        "If this painting had a soundtrack, what kind of music would it be?",
+        "Try to imagine what the woman is thinking or dreaming about.",
+        "How does the color blue make you feel?",
+        "What details make this painting feel both beautiful and a little sad?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The House of the Palm Tree",
+      "artist": "Joan Miró",
+      "artist_years": "1893-1983",
+      "location": "Various Galleries",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Joan_Mir%C3%B3_-_The_House_of_the_Palm_Tree.jpg/800px-Joan_Mir%C3%B3_-_The_House_of_the_Palm_Tree.jpg",
+      "source_url": "https://www.museoreinasofia.es",
+      "what_makes_cool": [
+        "Miró's early work, painted before he went full-on surrealist and abstract.",
+        "It's a landscape, but not like a photo. Miró was already playing with how he saw the world.",
+        "You can see real objects, but they're simplified, almost like symbols or hieroglyphs.",
+        "It shows his connection to his home in Catalonia, Spain, before he moved to Paris.",
+        "It's a peek into the mind of an artist who would later become super famous for his dreamlike paintings."
+      ],
+      "did_you_notice": [
+        "The palm tree isn't super realistic, but you definitely know it's a palm tree.",
+        "The colors are bright and earthy, reflecting the Mediterranean landscape.",
+        "The lines are clear and precise, almost like a drawing.",
+        "There's a sense of calm and order, even though it's not a perfect copy of reality.",
+        "Look for the small details that make up the house and the surrounding nature."
+      ],
+      "mind_blown": [
+        "Miró said he wanted to 'assassinate painting' – meaning he wanted to break all the traditional rules and create something totally new.",
+        "This painting is a bridge between traditional art and the wild, imaginative art he would create later.",
+        "He was inspired by Catalan folk art and Romanesque frescoes, which you can sometimes see in his simplified forms.",
+        "Even though it looks simple, every element is carefully placed and thought out."
+      ],
+      "observation_challenge": [
+        "If you were to draw this scene, how would you simplify the objects?",
+        "What feelings do the colors evoke in you?",
+        "Can you find any hidden faces or creatures in the landscape?",
+        "Imagine what it would be like to live in that house. What sounds would you hear?",
+        "How is this painting different from a photograph of a house and a palm tree?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Figure at a Window",
+      "artist": "Salvador Dalí",
+      "artist_years": "1904-1989",
+      "location": "Various Galleries",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Salvador_Dal%C3%AD%2C_1925%2C_Figure_at_a_Window.jpg/800px-Salvador_Dal%C3%AD%2C_1925%2C_Figure_at_a_Window.jpg",
+      "source_url": "https://www.museoreinasofia.es",
+      "what_makes_cool": [
+        "This is Dalí before he got super weird and surreal! It's a glimpse into his early, more traditional style.",
+        "It's a portrait of his sister, Ana María, looking out over the sea in Cadaqués, Spain.",
+        "Even though it's realistic, there's a sense of mystery and quiet contemplation.",
+        "Dalí was a master of light and shadow, and you can see that skill even in this early work.",
+        "It shows that even the most avant-garde artists often start with strong foundational skills."
+      ],
+      "did_you_notice": [
+        "The beautiful blue tones of the sea and sky, almost blending together.",
+        "The way the light hits her back, making her almost glow.",
+        "Her posture is relaxed, but also a bit distant, like she's lost in thought.",
+        "The simple, uncluttered room, drawing your eye to the window and the view.",
+        "The delicate folds of her dress and the way her hair is styled."
+      ],
+      "mind_blown": [
+        "Dalí and his sister had a complicated relationship later in life, making this early, serene portrait even more poignant.",
+        "This painting was made when Dalí was only 21 years old, showing his incredible talent from a young age.",
+        "It's a moment of calm before the storm of his famous surrealist works, which would shock the art world.",
+        "The view from the window is a real place, a landscape that inspired many of Dalí's works."
+      ],
+      "observation_challenge": [
+        "What do you think she's looking at or thinking about?",
+        "How does the light in the painting make you feel?",
+        "If you were in that room, what sounds would you hear?",
+        "Compare this to a later, more famous Dalí painting. How is his style different?",
+        "What details make this painting feel peaceful or serene?"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "The Great Masturbator",
+      "artist": "Salvador Dalí",
+      "artist_years": "1904-1989",
+      "location": "Various Galleries",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/The_Great_Masturbator.jpg/800px-The_Great_Masturbator.jpg",
+      "source_url": "https://www.museoreinasofia.es",
+      "what_makes_cool": [
+        "This is Dalí at his most surreal and mind-bending! It's like a dream (or nightmare) painted on canvas.",
+        "It's full of strange symbols and creatures that come straight from Dalí's subconscious mind.",
+        "The giant, soft, rock-like head in the center is actually a self-portrait of Dalí himself, but distorted.",
+        "It explores themes of desire, anxiety, and the weirdness of the human mind.",
+        "Dalí was a master at making impossible things look incredibly real, which makes it even more unsettling."
+      ],
+      "did_you_notice": [
+        "The grasshopper clinging to the face – Dalí had a phobia of grasshoppers!",
+        "The ants crawling on the figure, symbolizing decay and death.",
+        "The lion's head, which can represent desire or aggression.",
+        "The female figure embracing the distorted male figure, thought to be Gala, Dalí's wife and muse.",
+        "The vast, empty landscape in the background, adding to the dreamlike atmosphere."
+      ],
+      "mind_blown": [
+        "The title itself was super controversial and shocking when it was first shown, but Dalí loved to provoke!",
+        "Dalí claimed he painted this after a vivid dream, trying to capture the exact images from his subconscious.",
+        "He was incredibly precise in his painting technique, making the bizarre elements seem hyper-realistic.",
+        "This painting is a deep dive into Dalí's personal fears, desires, and obsessions."
+      ],
+      "observation_challenge": [
+        "What's the first thing that confuses or surprises you in this painting?",
+        "If this painting were a sound, what would it be?",
+        "Try to describe the texture of the giant head. Is it soft, hard, gooey?",
+        "What emotions does this painting evoke in you?",
+        "Can you find any other hidden symbols or creatures in the painting?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "The Bottle of Anís del Mono",
+      "artist": "Juan Gris",
+      "artist_years": "1887-1927",
+      "location": "Various Galleries",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Juan_Gris%2C_1914%2C_Bottle_of_Anis_del_Mono.jpg/800px-Juan_Gris%2C_1914%2C_Bottle_of_Anis_del_Mono.jpg",
+      "source_url": "https://www.museoreinasofia.es",
+      "what_makes_cool": [
+        "This is Cubism! Juan Gris was one of the OGs, right up there with Picasso and Braque.",
+        "It takes an everyday object – a bottle of Spanish liqueur – and breaks it into a million pieces, then puts it back together in a new way.",
+        "It's like looking at something from all angles at once, even though it's a flat painting.",
+        "Gris was known for his 'Synthetic Cubism,' which means he built up forms from different shapes and textures.",
+        "It's a puzzle for your eyes and brain – trying to figure out what you're seeing."
+      ],
+      "did_you_notice": [
+        "You can still recognize the bottle, even though it's fragmented.",
+        "The label for 'Anís del Mono' (Anise of the Monkey) is visible, but also broken up.",
+        "The use of different textures and patterns, like wood grain or newspaper print (even if it's painted to look like it).",
+        "The colors are often muted, focusing more on form and structure.",
+        "Look for the way light and shadow are used to create depth in a flat image."
+      ],
+      "mind_blown": [
+        "Cubism completely changed how people thought about art and reality. It was super revolutionary!",
+        "Gris was very systematic in his approach to Cubism, almost like a scientist dissecting an object.",
+        "The 'Anís del Mono' bottle was a common sight in Spain, so Gris was taking something familiar and making it totally new.",
+        "This painting isn't just about seeing; it's about *knowing* an object from multiple perspectives."
+      ],
+      "observation_challenge": [
+        "Can you identify all the parts of the bottle?",
+        "How many different textures or patterns can you find?",
+        "If you could touch this painting, what would it feel like?",
+        "Try to imagine the bottle as a 3D object based on the fragmented view.",
+        "What other objects do you think could be painted in this Cubist style?"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "The Laugh",
+      "artist": "Joan Miró",
+      "artist_years": "1893-1983",
+      "location": "Various Galleries",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Joan_Mir%C3%B3_-_The_Laugh.jpg/800px-Joan_Mir%C3%B3_-_The_Laugh.jpg",
+      "source_url": "https://www.museoreinasofia.es",
+      "what_makes_cool": [
+        "Miró's art is like a playground for your imagination! This painting is all about joy and playfulness.",
+        "It's abstract, so there's no 'right' way to see it. You get to decide what it means to you.",
+        "Miró used bright, primary colors and simple shapes, almost like a child's drawing, but with deep meaning.",
+        "He was part of the Surrealist movement, trying to capture dreams and the subconscious mind.",
+        "It's a reminder that art doesn't always have to be serious; it can be fun and make you smile."
+      ],
+      "did_you_notice": [
+        "The bold, black lines that define the shapes – they're almost like doodles.",
+        "The vibrant colors: reds, yellows, blues, and greens that pop off the canvas.",
+        "The way the shapes seem to float and dance across the painting.",
+        "Look for any figures or creatures you can imagine within the abstract forms.",
+        "The sense of movement and energy, even though it's a still painting."
+      ],
+      "mind_blown": [
+        "Miró believed that art should be 'innocent' and spontaneous, like a child's drawing, but with the wisdom of an adult.",
+        "He often started his paintings by just making random marks and then letting his imagination take over.",
+        "This painting might be a celebration of freedom and breaking away from traditional art rules.",
+        "Miró's work often has a connection to the cosmos and nature, even in his abstract pieces."
+      ],
+      "observation_challenge": [
+        "What kind of laugh do you hear when you look at this painting – a giggle, a chuckle, a roar?",
+        "If this painting were music, what would it sound like?",
+        "Try to draw your own 'laugh' using only abstract shapes and colors.",
+        "What emotions does this painting evoke in you?",
+        "Can you find a 'face' or an 'eye' hidden in the shapes?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "The Snail, the Woman, the Flower and the Star",
+      "artist": "Joan Miró",
+      "artist_years": "1893-1983",
+      "location": "Various Galleries",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Joan_Mir%C3%B3_-_The_Snail%2C_the_Woman%2C_the_Flower_and_the_Star.jpg/800px-Joan_Mir%C3%B3_-_The_Snail%2C_the_Woman%2C_the_Flower_and_the_Star.jpg",
+      "source_url": "https://www.museoreinasofia.es",
+      "what_makes_cool": [
+        "This is a super famous Miró series! He made a bunch of these 'Constellations' during World War II, as a way to escape the darkness of the world.",
+        "It's like a secret code or a dream map, full of symbols and strange creatures.",
+        "Miró was inspired by the night sky, music, and poetry when he made these.",
+        "The title itself is like a poem, bringing together everyday things with cosmic ideas.",
+        "It's a reminder that even in tough times, art can bring beauty and hope."
+      ],
+      "did_you_notice": [
+        "The bold, black lines that connect everything, like a spiderweb or a constellation.",
+        "The bright, primary colors that pop against the background.",
+        "The simplified shapes of the snail, woman, flower, and star – they're not realistic, but you can still recognize them.",
+        "Look for the tiny details and patterns that Miró added, almost like hidden messages.",
+        "The sense of balance and harmony, even with all the different elements."
+      ],
+      "mind_blown": [
+        "Miró created these 'Constellations' on paper, often while traveling, and they were a huge hit when they were first shown.",
+        "He believed that art should be universal, understood by everyone, no matter their background.",
+        "The 'star' in his paintings often represents a guiding light or a spiritual journey.",
+        "This series helped establish Miró as one of the most important artists of the 20th century."
+      ],
+      "observation_challenge": [
+        "Can you find all four elements from the title: the snail, the woman, the flower, and the star?",
+        "If this painting were a story, what would it be about?",
+        "Try to create your own 'constellation' using simple shapes and lines.",
+        "What emotions does this painting evoke in you?",
+        "How does Miró make simple shapes feel so alive and full of meaning?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "The Table with the Guitar",
+      "artist": "Juan Gris",
+      "artist_years": "1887-1927",
+      "location": "Various Galleries",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Juan_Gris_-_The_Table_with_the_Guitar.jpg/800px-Juan_Gris_-_The_Table_with_the_Guitar.jpg",
+      "source_url": "https://www.museoreinasofia.es",
+      "what_makes_cool": [
+        "Another awesome example of Cubism by Juan Gris! He loved taking everyday objects and turning them into mind-bending puzzles.",
+        "This painting is like a musical instrument exploded and then carefully put back together in a new, abstract way.",
+        "It's not just about seeing the guitar; it's about feeling its presence and its sound through shapes and colors.",
+        "Gris was a master of 'Synthetic Cubism,' where he built up forms from different textures and patterns, almost like a collage.",
+        "It challenges you to look beyond what's obvious and find beauty in the fragmented."
+      ],
+      "did_you_notice": [
+        "The different angles and perspectives of the guitar – you see it from the front, side, and even inside, all at once.",
+        "The way the table seems to tilt and shift, creating a dynamic composition.",
+        "The use of bold lines and geometric shapes to define the objects.",
+        "Look for the subtle textures and patterns that suggest wood, strings, or other materials.",
+        "The limited color palette, often earthy tones, which helps focus on the forms."
+      ],
+      "mind_blown": [
+        "Cubism was a radical art movement that completely changed how people thought about art and reality. It was super revolutionary!",
+        "Gris was very precise in his Cubist compositions, often planning them out with mathematical accuracy.",
+        "The guitar was a popular subject for Cubist artists because of its complex shape and its association with music and emotion.",
+        "This painting isn't just a still life; it's a meditation on the nature of perception and how we understand objects."
+      ],
+      "observation_challenge": [
+        "Can you identify all the parts of the guitar?",
+        "How many different perspectives of the table can you find?",
+        "If this painting were music, what kind of music would it be?",
+        "Try to imagine the guitar as a 3D object based on the fragmented view.",
+        "What other objects do you think would look cool painted in this Cubist style?"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "The Poet (Half Past Three)",
+      "artist": "Marc Chagall",
+      "artist_years": "1887-1985",
+      "location": "Various Galleries",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Marc_Chagall_-_The_Poet_%28Half_Past_Three%29.jpg/800px-Marc_Chagall_-_The_Poet_%28Half_Past_Three%29.jpg",
+      "source_url": "https://www.museoreinasofia.es",
+      "what_makes_cool": [
+        "Chagall's paintings are like dreams brought to life! This one is full of floating figures and vibrant colors.",
+        "He often painted memories from his childhood in Russia, blending reality with fantasy.",
+        "The title 'Half Past Three' adds a mysterious, almost magical element to the scene.",
+        "Chagall was a master storyteller, and each of his paintings tells a unique, personal tale.",
+        "It's a reminder that art can transport you to another world, full of wonder and imagination."
+      ],
+      "did_you_notice": [
+        "The poet figure, often seen as a self-portrait of Chagall himself, floating or upside down.",
+        "The vibrant, almost glowing colors that Chagall used – especially blues, greens, and reds.",
+        "The way different elements seem to defy gravity, like the floating figures or objects.",
+        "Look for symbols that often appear in Chagall's work, like animals, musical instruments, or scenes from his hometown.",
+        "The sense of movement and fluidity, even though it's a still painting."
+      ],
+      "mind_blown": [
+        "Chagall's art is often called 'poetic Cubism' or 'Symbolic Cubism' because he used elements of Cubism but filled them with personal meaning and emotion.",
+        "He was one of the first artists to truly blend his Jewish heritage and Russian folklore into modern art.",
+        "This painting, like many of his, explores themes of love, memory, and spiritual longing.",
+        "Chagall believed that art should be a window into the soul, a way to express the deepest human emotions."
+      ],
+      "observation_challenge": [
+        "What do you think the poet is thinking or dreaming about?",
+        "If this painting were a song, what kind of song would it be?",
+        "Try to imagine yourself floating in this painting. What would you see and feel?",
+        "What emotions does this painting evoke in you?",
+        "Can you find any hidden messages or symbols in the painting?"
+      ]
+    }
+  ]
+}

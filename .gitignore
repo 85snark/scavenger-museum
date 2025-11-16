@@ -12,11 +12,10 @@ __pycache__/
 
 # Generated files
 *.pdf
-museum_guide.html
-*.json
 
-# But include template.html
-!template.html
+# Track both input data and output files
+!data/*.json
+!output/*.html
 
 # IDE
 .vscode/

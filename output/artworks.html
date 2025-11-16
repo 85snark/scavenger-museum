@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo del Prado - The Fun Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            font-size: 11.2px;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            page-break-after: always;
+        }
+
+        .cover-page h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .cover-page h2 {
+            font-size: 2rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* Artwork Pages */
+        .artwork-page {
+            padding: 1.25rem 1.5rem;
+            page-break-after: always;
+            min-height: 100vh;
+        }
+
+        /* Top Section: Info + Image */
+        .top-section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1rem;
+            align-items: start;
+        }
+
+        .artwork-header {
+            padding-bottom: 0.5rem;
+        }
+
+        .image-container {
+            text-align: left;
+        }
+
+        .artwork-image {
+            max-height: 180px;
+            width: auto;
+            border: 3px solid #1f2937;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .artwork-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.56rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            background: linear-gradient(90deg, #8B0000 0%, #DC2626 50%, #F97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            line-height: 1.2;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+        }
+
+        .artist-info {
+            font-size: 1.08rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .location-box {
+            margin-top: 0.5rem;
+            font-size: 1.08rem;
+            color: #ea580c;
+        }
+
+        .location-box strong {
+            color: #ea580c;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        /* Section Boxes */
+        .section {
+            border-left: 3px solid #ccc;
+            padding: 0.65rem 0.75rem;
+            background-color: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .section-header {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .section-emoji {
+            font-size: 0.88rem;
+        }
+
+        .section.what-makes-cool {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.what-makes-cool .section-header {
+            color: #ea580c;
+        }
+
+        .section.did-you-notice {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.did-you-notice .section-header {
+            color: #ea580c;
+        }
+
+        .section.mind-blown {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.mind-blown .section-header {
+            color: #ea580c;
+        }
+
+        .section.observation {
+            border-left-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+
+        .section.observation .section-header {
+            color: #1d4ed8;
+        }
+
+        .section-subtitle {
+            font-size: 0.64rem;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 0.35rem;
+        }
+
+        /* List Items */
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section li {
+            margin-bottom: 0.35rem;
+            padding-left: 1.25rem;
+            position: relative;
+            font-size: 0.74rem;
+        }
+
+        .section.what-makes-cool li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #ea580c;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 0.74rem;
+        }
+
+        /* Checkbox Items */
+        .checkbox-item {
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+            padding-left: 0 !important;
+            font-size: 0.74rem;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border: 2px solid #9ca3af;
+            border-radius: 50%;
+            margin-top: 2px;
+            background-color: white;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .cover-page,
+            .artwork-page {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            .artwork-image {
+                max-height: 180px !important;
+                max-width: 300px !important;
+                object-fit: contain;
+            }
+
+            .artwork-title {
+                background: none !important;
+                -webkit-text-fill-color: #8B0000 !important;
+                color: #8B0000 !important;
+            }
+        }
+
+        @page {
+            size: letter;
+            margin: 0.4in 0.5in;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover-page">
+        <h1>Museo del Prado</h1>
+        <h2>The Fun Guide</h2>
+    </div>
+
+    <!-- Artwork Pages -->
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/The_Garden_of_earthly_delights.jpg/1200px-The_Garden_of_earthly_delights.jpg" alt="The Garden of Earthly Delights" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">1.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Garden</span>
+                        
+                    
+                        
+                            <span class="title-main">of</span>
+                        
+                    
+                        
+                            <span class="title-highlight">Earthly</span>
+                        
+                    
+                        
+                            <span class="title-main">Delights</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Hieronymus Bosch (1450-1516)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 56A - Ground Floor
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Created between 1490-1510 by Hieronymus Bosch</li>
+                    
+                    <li>It's a triptych (three connected panels) measuring over 12 feet wide when opened</li>
+                    
+                    <li>Left panel: Garden of Eden with Adam and Eve</li>
+                    
+                    <li>Center panel: A wild fantasy world with nude people and giant fruits</li>
+                    
+                    <li>Right panel: Hell with punishment scenes</li>
+                    
+                    <li>Shows medieval ideas about sin, pleasure, and consequences</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Over 450 different figures and creatures total</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Giant strawberries, cherries, and fruits with people climbing in and out</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Hybrid creatures: fish with legs, birds with human features, plant-people</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The "tree-man" in hell - his body is hollow with a tavern inside</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Musical instruments used as torture devices in the hell panel</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Owls appear throughout (symbol of evil in medieval times)</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Colors still incredibly bright after 500+ years (expensive pigments from crushed gems)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Bosch never signed or dated this painting - attribution is based on style</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find at least 5 different hybrid creatures or weird combinations</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Spot the person enclosed in a giant translucent sphere</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look for someone trapped inside a pink fruit (lower right, center panel)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find musical instruments being used in strange ways (hell panel)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Locate the giant ears with a knife between them</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count how many birds you can find across all three panels</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/The_Triumph_of_Death_by_Pieter_Bruegel_the_Elder.jpg" alt="The Triumph of Death" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">2.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Triumph</span>
+                        
+                    
+                        
+                            <span class="title-main">of</span>
+                        
+                    
+                        
+                            <span class="title-highlight">Death</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Pieter Bruegel the Elder (1525-1569)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 55A - Ground Floor
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Painted around 1562 during religious wars and plague outbreaks in Europe</li>
+                    
+                    <li>Created during the Protestant Reformation when Europe was divided by conflict</li>
+                    
+                    <li>Part of a tradition of "death art" popular in Northern Europe</li>
+                    
+                    <li>Shows that death comes for everyone - rich or poor, powerful or weak</li>
+                    
+                    <li>The burning landscape represents both real warfare and visions of the apocalypse</li>
+                    
+                    <li>Bruegel was famous for landscapes with tiny detailed figures and hidden meanings</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>An organized skeleton army with cavalry, soldiers, and commanders</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Skeletons use coffin lids as shields and ring bells to announce death</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Skeleton orchestra with a hurdy-gurdy player leading the "symphony of death"</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A king being robbed of his gold - wealth can't save him</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A cardinal (church leader) being attacked - even religion can't help</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A couple playing music, ignoring everything (representing denial of death)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Over 100 individual skeleton figures throughout the painting</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Ships sinking, buildings burning, people being herded into a giant coffin-trap</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the skeleton hurdy-gurdy player in the center</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Spot three different social classes: king (with gold), cardinal (red robes), peasants</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Notice the skeletal cavalry on skeleton horses</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the gambling table where skeletons play dice with victims</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Locate the cart full of skulls being pulled by a skeleton horse</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look for people trying to hide behind overturned tables</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/El_Descendimiento%2C_by_Rogier_van_der_Weyden%2C_from_Prado_in_Google_Earth.jpg/330px-El_Descendimiento%2C_by_Rogier_van_der_Weyden%2C_from_Prado_in_Google_Earth.jpg" alt="The Descent from the Cross" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">3.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Descent</span>
+                        
+                    
+                        
+                            <span class="title-main">from</span>
+                        
+                    
+                        
+                            <span class="title-main">the</span>
+                        
+                    
+                        
+                            <span class="title-highlight">Cross</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Rogier van der Weyden (1399-1464)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 58 - Ground Floor
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Painted around 1435 for the Crossbowmen's Guild in Belgium</li>
+                    
+                    <li>Created by Rogier van der Weyden, a master Flemish painter</li>
+                    
+                    <li>Oil on oak panel - allows super-detailed painting and glowing colors</li>
+                    
+                    <li>Colors made from expensive materials: blue from crushed Afghan gems, red from mercury</li>
+                    
+                    <li>The gold background makes it look like a carved wooden shrine</li>
+                    
+                    <li>Influenced European art for generations after it was created</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Mary's fainting body mirrors Christ's exact pose - showing a mother's shared pain</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>10 figures arranged in a careful S-shaped curve</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The man on the ladder wears 1400s clothing (not biblical robes)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Mary Magdalene is at Christ's feet, wringing her hands in grief</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Joseph of Arimathea wears fancy red robes with ermine fur collar</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Tiny crossbows carved in the frame corners (guild symbol)</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The painting was made for the archers' guild, and van der Weyden included a clever 'logo'—tiny crossbows hidden in the decorative corners of the frame.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The scene is intentionally cramped to look like a shallow, carved shrine. This makes the life-sized figures feel like they are right in the room with you.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The skull at the bottom isn't just for spooky effect; it identifies the location as Golgotha ('place of the skull') and symbolizes Christ's triumph over death.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>An admirer, the future King Philip II of Spain, loved the painting so much he had it brought to Spain, which is why it's in the Prado today.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count all 10 people: Christ, Mary, John (in red), Mary Magdalene, and others</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Trace Christ's body shape and Mary's swooning body - see how they match?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How many different fabric patterns and textures can you spot?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Which person looks most upset? Look at their facial expressions</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the tiny crossbows in the decorative corners</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Notice the gold pattern background - it's supposed to look like a church</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/David_vencedor_de_Goliat%2C_de_Palma_el_Joven_%28Museo_del_Prado%29.jpg" alt="David with the Head of Goliath" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">4.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">David</span>
+                        
+                    
+                        
+                            <span class="title-main">with</span>
+                        
+                    
+                        
+                            <span class="title-main">the</span>
+                        
+                    
+                        
+                            <span class="title-main">Head</span>
+                        
+                    
+                        
+                            <span class="title-main">of</span>
+                        
+                    
+                        
+                            <span class="title-highlight">Goliath</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Caravaggio (1571-1610)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 7 - Ground Floor
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Painted around 1600 by Caravaggio, who revolutionized painting with dramatic lighting</li>
+                    
+                    <li>Uses "tenebrism" - extreme contrast between light and dark backgrounds</li>
+                    
+                    <li>Caravaggio painted real people (even street people) as models for biblical figures</li>
+                    
+                    <li>The David and Goliath story: young David defeats giant Goliath with God's help</li>
+                    
+                    <li>Caravaggio had a wild life - arrested for fights, even killed someone</li>
+                    
+                    <li>He fled Rome to escape punishment</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Goliath's head is believed to be Caravaggio's self-portrait - showing remorse?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Light dramatically hits David while Goliath's head stays in shadow</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>David doesn't look happy or proud - he looks sad or troubled</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The sword has an inscription: "H-AS OS" = "Humility Kills Pride"</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>David holds the head at arm's length, like he's uncomfortable</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Goliath's eyes aren't fully closed - still has life in them</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Caravaggio may have sent this painting to a powerful cardinal as a visual plea for a pardon after he was exiled for murder.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The painting is a triple self-portrait: the young Caravaggio as David, the older, sinful Caravaggio as Goliath, and the artist's signature is metaphorically on the sword.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The intense lighting isn't just for drama. It's a technique called 'tenebrism,' using extreme dark and light to create a psychological and spiritual mood.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>David doesn't look triumphant. His expression is one of pity and sadness, which was a radical departure from how this heroic scene was usually depicted.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Study David's face - does he look victorious, sad, or disturbed?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Which direction is the light coming from? How does it create drama?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Notice how light makes David's body look 3D and muscular</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Compare ages: David looks very young, Goliath looks older</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Can you read the inscription on the sword?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look at Goliath's eyes - what does it mean that they're half-open?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/The_Nobleman_with_his_hand_on_his_chest%2C_by_El_Greco_%28Museo_del_Prado%2C_Madrid%29.jpg" alt="The Nobleman with his Hand on his Chest" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">5.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Nobleman</span>
+                        
+                    
+                        
+                            <span class="title-main">with</span>
+                        
+                    
+                        
+                            <span class="title-highlight">his</span>
+                        
+                    
+                        
+                            <span class="title-main">Hand</span>
+                        
+                    
+                        
+                            <span class="title-main">on</span>
+                        
+                    
+                        
+                            <span class="title-highlight">his</span>
+                        
+                    
+                        
+                            <span class="title-main">Chest</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by El Greco (1541-1614)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 9B - Ground Floor
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Painted around 1580 in Toledo, Spain</li>
+                    
+                    <li>By El Greco ("The Greek") - born in Crete, trained in Italy, worked in Spain</li>
+                    
+                    <li>Shows an unknown Spanish gentleman - possibly a lawyer or courtier</li>
+                    
+                    <li>Hand-on-chest pose = taking an oath or pledging honor</li>
+                    
+                    <li>In 1500s Spain, honor was extremely important to society</li>
+                    
+                    <li>El Greco blended Byzantine, Italian, and Spanish art styles</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Nobody knows who this man is - it's a 400+ year mystery!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The huge white ruff collar was super fashionable in 1580s Spain</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Amazing detail in the lace pleating and fabric</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Gold sword hilt shows he's a "hidalgo" (gentleman with right to carry weapons)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Each finger carefully positioned - not a casual pose</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Ring on his finger might show marriage or group membership</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The subject's identity is one of art's great mysteries. For centuries, people thought it was the writer Cervantes, but there's no proof.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The hand gesture isn't just a pose; it's the formal act of swearing an oath, making this portrait a public declaration of honor.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>El Greco often signed his paintings with his full Greek name, 'Domenikos Theotokopoulos,' as a proud reminder of his origins in Crete.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The man's elongated fingers are a signature of El Greco's unique style, which some historians once bizarrely attributed to astigmatism.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look at the hand position - what oath might he be taking?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count the clothing layers: doublet, shirt, ruff collar</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the gold chain around his neck (award for royal service)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>He's looking right at you - how does that feel?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Compare textures: soft skin vs. crisp collar vs. shiny sword</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Notice the color scheme: mostly black, white, and gold</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg/1200px-Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg" alt="Las Meninas (The Ladies-in-Waiting)" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">6.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">Las</span>
+                        
+                    
+                        
+                            <span class="title-main">Meninas</span>
+                        
+                    
+                        
+                            <span class="title-main">(The</span>
+                        
+                    
+                        
+                            <span class="title-main">Ladies-in-Waiting)</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Diego Velázquez (1599-1660)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 12 - Ground Floor
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Painted in 1656 by Velázquez, court painter to the Spanish King</li>
+                    
+                    <li>HUGE painting - over 10 feet tall!</li>
+                    
+                    <li>Shows 5-year-old Princess Margarita with her maids and attendants</li>
+                    
+                    <li>Velázquez painted for the royal family for almost 40 years</li>
+                    
+                    <li>One of the most famous paintings ever - Picasso painted 58 versions of it!</li>
+                    
+                    <li>Art historians call it one of the most complex paintings in history</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Velázquez painted HIMSELF in the painting (left side with brushes)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The mirror on the back wall shows the King and Queen</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Mind-bending puzzle: Are WE standing where the King/Queen are?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Figure in the bright doorway creates depth</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A big mastiff dog is being nudged by a dwarf</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Room is in the royal palace (burned down in 1734)</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The red cross on the artist's chest was supposedly painted on by the King himself after Velázquez's death, to honor him with a posthumous knighthood.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting is like a 17th-century photograph of a real room in the Madrid palace, which burned down in 1734. The painting is our only color snapshot of what it looked like.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The entire scene is a complex visual puzzle. By painting the King and Queen only in a mirror, Velázquez places YOU, the viewer, in the exact spot where the royals would be standing.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Picasso was so obsessed with 'Las Meninas' that in 1957 he painted 58 different versions of it, analyzing and reinterpreting it in his own style.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find all 11 people: Princess, 2 maids, 2 dwarfs, chaperone, guard, Velázquez, door guy, King & Queen in mirror</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look at the mirror - how does it expand the space?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the red cross on Velázquez's chest</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Which direction is the light coming from?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Compare paint details: close-up vs. background figures</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What do you think is happening in this scene?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Carlos_V_en_M%C3%BChlberg%2C_by_Titian%2C_from_Prado_in_Google_Earth.jpg/960px-Carlos_V_en_M%C3%BChlberg%2C_by_Titian%2C_from_Prado_in_Google_Earth.jpg" alt="Charles V at Mühlberg" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">7.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">Charles</span>
+                        
+                    
+                        
+                            <span class="title-main">V</span>
+                        
+                    
+                        
+                            <span class="title-main">at</span>
+                        
+                    
+                        
+                            <span class="title-highlight">Mühlberg</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Titian (1488-1576)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 27 - First Floor
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Painted in 1548 by Titian, greatest Renaissance painter of Venice</li>
+                    
+                    <li>Shows Emperor Charles V after winning the Battle of Mühlberg (1547)</li>
+                    
+                    <li>Charles ruled a MASSIVE empire: Spain, Austria, Netherlands, colonies in America</li>
+                    
+                    <li>One of the largest empires since ancient Rome</li>
+                    
+                    <li>Based on ancient Roman emperor statues on horseback</li>
+                    
+                    <li>Became the model for all royal horse portraits for 200+ years</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Charles wears full armor weighing 55 pounds - yet sits perfectly straight!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Armor decorated with gold and the Order of the Golden Fleece medal</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Lance = symbol of military power and knightly honor</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Horse is walking calmly, not charging (shows control and dignity)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Amazing textures: shiny metal, soft feathers, muscular horse</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Sunset sky creates golden-red glow = glory of victory</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The stunning suit of armor worn by the Emperor in the painting is not imaginary. It's a real suit that you can still see today at the Royal Armoury in Madrid.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting basically invented the 'hero on a horse' portrait. It became the blueprint for how to paint powerful rulers for the next 200 years.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Although it celebrates a military victory, there is no enemy and no blood. Titian wanted to portray the Emperor as a calm, Christian knight, not a brutal conqueror.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Charles V suffered from a severe jaw deformity (the 'Habsburg jaw') that made it hard to close his mouth. Titian cleverly painted him with a closed mouth to project an image of strength and dignity.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Notice how horse and rider are framed against the sky - heroic silhouette!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Compare colors: warm sunset (orange/red/gold) vs. cool landscape (green/blue)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find reflections on the polished armor</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The horse is walking, not charging - what does this say about Charles?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Locate the Order of the Golden Fleece medallion</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Notice the lance angle - it guides your eye across the painting</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/The_Three_Graces%2C_by_Peter_Paul_Rubens%2C_from_Prado_in_Google_Earth.jpg/960px-The_Three_Graces%2C_by_Peter_Paul_Rubens%2C_from_Prado_in_Google_Earth.jpg" alt="The Three Graces" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">8.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Three</span>
+                        
+                    
+                        
+                            <span class="title-highlight">Graces</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Peter Paul Rubens (1577-1640)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 29 - First Floor
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Painted around 1635 by Peter Paul Rubens, leading Baroque painter</li>
+                    
+                    <li>The Three Graces = goddesses from Greek mythology</li>
+                    
+                    <li>They represent Splendor, Mirth (Joy), and Good Cheer</li>
+                    
+                    <li>Popular subject during Renaissance - reviving ancient themes</li>
+                    
+                    <li>Rubens probably painted this for himself, not a customer</li>
+                    
+                    <li>Based on ancient Roman sculptures and Renaissance paintings</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Left Grace is modeled after Rubens's young wife, Helena</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Circular composition - they link hands in a continuous flow</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Garden background: fountain, lush plants, rainbow (symbols of fertility and blessings)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Transparent veil draped across them creates mystery</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Rubens's signature full-figured body type (very different from modern beauty standards)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Amazing skin painting: subtle color changes make flesh look alive</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The figure on the left is a portrait of the artist's own young wife, Helena Fourment. The painting was a personal work that Rubens kept for himself until he died.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Rubens's celebration of full-figured women was so influential that the term 'Rubenesque' was coined to describe this body type.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The painting is a masterclass in texture. You can almost feel the difference between the soft skin, the delicate veil, the hard stone fountain, and the fluffy trees.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The Graces are linked in a circle to represent a continuous cycle of giving and receiving beauty, joy, and charm.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Trace how the three figures connect through linked hands - see the circular flow?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Study the skin painting: notice pinks, creams, and blue-ish shadows</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the fountain, rainbow, and cupid in the background</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How did Rubens paint the veil to look transparent?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Compare the three faces - are they the same person or different?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Which direction is the light coming from?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg/1200px-El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg" alt="The Third of May 1808" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">9.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">The</span>
+                        
+                    
+                        
+                            <span class="title-main">Third</span>
+                        
+                    
+                        
+                            <span class="title-main">of</span>
+                        
+                    
+                        
+                            <span class="title-highlight">May</span>
+                        
+                    
+                        
+                            <span class="title-main">1808</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Francisco Goya (1746-1828)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 64 - First Floor
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Painted in 1814 by Goya, 6 years after the event happened</li>
+                    
+                    <li>Shows French soldiers executing Spanish rebels on May 3, 1808</li>
+                    
+                    <li>Napoleon's army invaded Spain - this was retaliation for an uprising</li>
+                    
+                    <li>Goya lived through the war and saw its horrors firsthand</li>
+                    
+                    <li>Revolutionary: first major painting to show victims, not victors</li>
+                    
+                    <li>Influenced later anti-war art (including Picasso's "Guernica")</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Man in blazing white shirt = focal point, posed like Christ crucified</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>His arms form a Y-shape or crucifixion pose (martyr/saint symbol)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Huge lantern on ground creates dramatic spotlight (like Caravaggio's technique)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>French firing squad: FACELESS - they're dehumanized killing machines</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Rigid soldiers vs. emotional, chaotic victims = contrast</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Dead bodies in pools of blood - Goya shows the brutal reality</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting has a companion piece, 'The Second of May 1808,' which depicts the violent street riot that triggered the executions shown here.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>It's considered one of the first modern paintings because it broke all the rules of heroic war art. Instead of a glorious general, the hero is an anonymous, terrified civilian.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The large square lantern is the only source of light, acting like a dramatic spotlight on a stage and forcing the viewer to confront the horror.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The painting's raw anti-war message directly influenced many later artists, most famously Pablo Picasso's monumental work, 'Guernica'.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Why is the central man's shirt SO brilliantly white? What does it symbolize?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Notice: faceless soldiers (right) vs. individual victims (left)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count the different emotions on the victims' faces</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Madrid buildings are barely visible - what does this suggest?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Compare body language: mechanical soldiers vs. expressive victims</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find religious symbols: Christ pose, praying monk, possible stigmata on hands</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg/1200px-Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg" alt="Saturn Devouring His Son" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">10.</span>
+                    
+                    
+                    
+                        
+                            <span class="title-main">Saturn</span>
+                        
+                    
+                        
+                            <span class="title-main">Devouring</span>
+                        
+                    
+                        
+                            <span class="title-highlight">His</span>
+                        
+                    
+                        
+                            <span class="title-main">Son</span>
+                        
+                    
+                </h1>
+                <p class="artist-info">by Francisco Goya (1746-1828)</p>
+                <div class="location-box">
+                    <strong>Location:</strong> Room 67 - First Floor (Black Paintings section)
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Painted 1819-1823, one of Goya's fourteen "Black Paintings"</li>
+                    
+                    <li>Painted directly on the walls of Goya's house (not for the public!)</li>
+                    
+                    <li>Goya was in his 70s, deaf, sick, and disillusioned with humanity</li>
+                    
+                    <li>Reflects his trauma from witnessing war and cruelty</li>
+                    
+                    <li>Transferred from wall to canvas 50 years later (1874)</li>
+                    
+                    <li>Based on Roman myth: Saturn ate his children to prevent them from overthrowing him</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Saturn's wild, bulging eyes = madness and paranoia</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Raw, animalistic violence (not the calm classical versions)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Victim is adult-sized (not a baby) - possibly symbolizes time devouring everything</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Could be political: Spain consuming its own people</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Dark, oppressive background = claustrophobic horror</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Gnarled hands clutching with desperate strength</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This painting was never meant to be seen by the public. Goya painted it directly onto the wall of his own dining room.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>In the original Roman myth, Saturn eats his children as babies. Goya's decision to show a fully grown victim makes the scene much more brutal and shocking.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The 'Black Paintings' are an allegory. They could represent time devouring all things, a country destroying its own youth through war, or simply the artist's own fear of madness and death.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The 'Black Paintings' were removed from the walls of Goya's house and transferred to canvas over 50 years after he painted them. Without this difficult process, they would have been lost forever.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Study Saturn's eyes - what emotions: fear, madness, desperation, hunger?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Notice: figure fills the whole frame = oppressive, inescapable feeling</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Can you see the thick, expressive brushstrokes?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How does the dark color palette affect the mood?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Compare to other classical myths - how is this version different?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Why would Goya paint this horror on his dining room wall?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

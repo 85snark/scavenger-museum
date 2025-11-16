@@ -21,7 +21,7 @@ def load_template(template_path):
         return Template(f.read())
 
 
-def generate_guide(json_path='artworks.json', template_path='template.html', output_path='museum_guide.html'):
+def generate_guide(json_path='data/prado_artworks.json', template_path='template.html', output_path=None):
     """
     Generate the museum guide HTML file.
 
@@ -32,6 +32,11 @@ def generate_guide(json_path='artworks.json', template_path='template.html', out
     """
     print("🎨 Museum Guide Generator")
     print("=" * 50)
+
+    # Auto-generate output path if not specified
+    if output_path is None:
+        json_filename = Path(json_path).stem  # Get filename without extension
+        output_path = f'output/{json_filename}.html'
 
     # Load data
     print(f"📖 Loading artwork data from {json_path}...")
@@ -74,8 +79,8 @@ def main():
     )
     parser.add_argument(
         '--json',
-        default='artworks.json',
-        help='Path to JSON data file (default: artworks.json)'
+        default='data/prado_artworks.json',
+        help='Path to JSON data file (default: data/prado_artworks.json)'
     )
     parser.add_argument(
         '--template',
@@ -84,8 +89,8 @@ def main():
     )
     parser.add_argument(
         '--output',
-        default='museum_guide.html',
-        help='Output HTML file path (default: museum_guide.html)'
+        default=None,
+        help='Output HTML file path (default: output/<json_filename>.html)'
     )
 
     args = parser.parse_args()
