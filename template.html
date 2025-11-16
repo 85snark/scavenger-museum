@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ museum_name }} - {{ guide_title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            font-size: 11.2px;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            page-break-after: always;
+        }
+
+        .cover-page h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .cover-page h2 {
+            font-size: 2rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* Artwork Pages */
+        .artwork-page {
+            padding: 1.25rem 1.5rem;
+            page-break-after: always;
+            min-height: 100vh;
+        }
+
+        /* Top Section: Info + Image */
+        .top-section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1rem;
+            align-items: start;
+        }
+
+        .artwork-header {
+            padding-bottom: 0.5rem;
+        }
+
+        .image-container {
+            text-align: left;
+        }
+
+        .artwork-image {
+            max-height: 180px;
+            width: auto;
+            border: 3px solid #1f2937;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .artwork-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.56rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            background: linear-gradient(90deg, #8B0000 0%, #DC2626 50%, #F97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            line-height: 1.2;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+        }
+
+        .artist-info {
+            font-size: 1.08rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .location-box {
+            margin-top: 0.5rem;
+            font-size: 1.08rem;
+            color: #ea580c;
+        }
+
+        .location-box strong {
+            color: #ea580c;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        /* Section Boxes */
+        .section {
+            border-left: 3px solid #ccc;
+            padding: 0.65rem 0.75rem;
+            background-color: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .section-header {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .section-emoji {
+            font-size: 0.88rem;
+        }
+
+        .section.what-makes-cool {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.what-makes-cool .section-header {
+            color: #ea580c;
+        }
+
+        .section.did-you-notice {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.did-you-notice .section-header {
+            color: #ea580c;
+        }
+
+        .section.mind-blown {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.mind-blown .section-header {
+            color: #ea580c;
+        }
+
+        .section.observation {
+            border-left-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+
+        .section.observation .section-header {
+            color: #1d4ed8;
+        }
+
+        .section-subtitle {
+            font-size: 0.64rem;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 0.35rem;
+        }
+
+        /* List Items */
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section li {
+            margin-bottom: 0.35rem;
+            padding-left: 1.25rem;
+            position: relative;
+            font-size: 0.74rem;
+        }
+
+        .section.what-makes-cool li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #ea580c;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 0.74rem;
+        }
+
+        /* Checkbox Items */
+        .checkbox-item {
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+            padding-left: 0 !important;
+            font-size: 0.74rem;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border: 2px solid #9ca3af;
+            border-radius: 50%;
+            margin-top: 2px;
+            background-color: white;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .cover-page,
+            .artwork-page {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            .artwork-image {
+                max-height: 180px !important;
+                max-width: 300px !important;
+                object-fit: contain;
+            }
+
+            .artwork-title {
+                background: none !important;
+                -webkit-text-fill-color: #8B0000 !important;
+                color: #8B0000 !important;
+            }
+        }
+
+        @page {
+            size: letter;
+            margin: 0.4in 0.5in;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover-page">
+        <h1>{{ museum_name }}</h1>
+        <h2>{{ guide_title }}</h2>
+    </div>
+
+    <!-- Artwork Pages -->
+    {% for artwork in artworks %}
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="{{ artwork.image_url }}" alt="{{ artwork.title }}" class="artwork-image">
+            </div>
+            <div class="artwork-header">
+                <h1 class="artwork-title">
+                    <span class="number">{{ artwork.id }}.</span>
+                    {% set parts = artwork.title.split(' ') %}
+                    {% set highlight_words = ['Earthly', 'Death', 'Cross', 'Goliath', 'his', 'Ladies-in-Waiting', 'Mühlberg', 'Graces', 'May', 'His'] %}
+                    {% for word in parts %}
+                        {% if word in highlight_words %}
+                            <span class="title-highlight">{{ word }}</span>
+                        {% else %}
+                            <span class="title-main">{{ word }}</span>
+                        {% endif %}
+                    {% endfor %}
+                </h1>
+                <p class="artist-info">by {{ artwork.artist }} ({{ artwork.artist_years }})</p>
+                <div class="location-box">
+                    <strong>Location:</strong> {{ artwork.location }}
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    {% for item in artwork.what_makes_cool %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                {% for item in artwork.did_you_notice %}
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>{{ item }}</div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                {% for item in artwork.mind_blown %}
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>{{ item }}</div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                {% for item in artwork.observation_challenge %}
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>{{ item }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
