@@ -1,21 +1,25 @@
-# Museo del Prado - The Fun Guide
+# Museum Scavenger Hunt Guide Generator
 
-A printable museum scavenger hunt guide generator for the Prado Museum in Madrid, Spain.
+A flexible, printable museum scavenger hunt guide generator that works with any museum or collection. Simply provide your artwork data in JSON format and generate beautiful, interactive HTML guides.
 
 ## Architecture
 
 This project consists of three main components:
 
-### 1. `artworks.json` - Data File
-Contains all details for 10 famous artworks from the Prado Museum, including:
+### 1. JSON Data Files (in `data/` directory)
+Contains artwork details in JSON format. Each dataset includes:
 - Basic artwork information (title, artist, dates, location)
-- Wikimedia Commons image URLs (no local files needed!)
+- Image URLs (supports Wikimedia Commons or any public URL)
 - Museum source URLs for attribution
 - Four interactive sections:
   - **What makes this cool** - Fascinating facts about each artwork
   - **Did you notice?** - Observable details with checkboxes
   - **Mind Blown!** - Surprising insights with checkboxes
   - **Observation Challenge** - Interactive challenges with checkboxes
+
+**Included datasets:**
+- `prado_artworks.json` - Museo del Prado (Madrid, Spain)
+- `sofia_reina_artworks.json` - Museo Reina Sofía (Madrid, Spain)
 
 ### 2. `template.html` - Jinja2 Template
 A reusable HTML template that creates:
@@ -27,7 +31,12 @@ A reusable HTML template that creates:
 - Interactive checkboxes for tracking progress
 
 ### 3. `generate_guide.py` - Python Generator Script
-Reads the JSON data and template to create a standalone, printable HTML file.
+Reads any JSON data file and the template to create standalone, printable HTML files.
+
+**Features:**
+- Automatically names output files based on input JSON (e.g., `prado_artworks.json` → `prado_artworks.html`)
+- Outputs to `output/` directory for organization
+- Command-line options for full customization
 
 ## Setup
 
@@ -44,18 +53,28 @@ pip install -r requirements.txt
 
 ## Usage
 
-Generate the museum guide:
+Generate a museum guide using the default dataset (Prado):
 ```bash
 python generate_guide.py
 ```
 
-This creates `museum_guide.html` - a standalone file ready to print!
+This creates `output/prado_artworks.html` - a standalone file ready to print!
+
+Generate a guide from a different dataset:
+```bash
+python generate_guide.py --json data/sofia_reina_artworks.json
+```
+
+This creates `output/sofia_reina_artworks.html`.
 
 ### Command-line Options
 
 ```bash
-# Use custom files
-python generate_guide.py --json my_artworks.json --template my_template.html --output my_guide.html
+# Use custom JSON file (output is auto-named)
+python generate_guide.py --json data/my_museum.json
+
+# Override everything
+python generate_guide.py --json data/my_museum.json --template my_template.html --output custom_name.html
 
 # See all options
 python generate_guide.py --help
@@ -63,16 +82,16 @@ python generate_guide.py --help
 
 ## Printing
 
-1. Open `museum_guide.html` in your web browser
+1. Open any generated HTML file from `output/` in your web browser
 2. Press `Ctrl+P` (or `Cmd+P` on Mac) to open print dialog
 3. Each artwork will automatically be on its own page
 4. Save as PDF or print directly
 
-## Customization
+## Creating Your Own Museum Guide
 
-### Adding New Artworks
+### Option 1: Add to Existing Dataset
 
-Edit `artworks.json` and add new entries following this structure:
+Edit any JSON file in `data/` and add new entries following this structure:
 
 ```json
 {
@@ -90,12 +109,29 @@ Edit `artworks.json` and add new entries following this structure:
 }
 ```
 
-### Finding Wikimedia Commons Images
+### Option 2: Create a New Museum Dataset
 
+1. Create a new JSON file in `data/` (e.g., `data/met_artworks.json`)
+2. Follow the JSON structure shown above
+3. Include your museum name and guide title:
+   ```json
+   {
+     "museum_name": "Your Museum Name",
+     "guide_title": "Your Guide Title",
+     "artworks": [...]
+   }
+   ```
+4. Generate with: `python generate_guide.py --json data/met_artworks.json`
+
+### Finding Images
+
+**Wikimedia Commons (recommended):**
 1. Search for artwork on [Wikimedia Commons](https://commons.wikimedia.org/)
 2. Find high-quality version of the image
 3. Right-click image and copy image URL
 4. Use this URL in the `image_url` field
+
+**Other sources:** Any publicly accessible image URL will work
 
 ### Modifying the Design
 
@@ -105,9 +141,20 @@ Edit `template.html` to customize:
 - Section headings
 - Print formatting
 
-## Files Generated
+## Project Structure
 
-- `museum_guide.html` - The final printable guide (standalone, includes all styles)
+```
+scavenger-museum/
+├── data/                          # Input JSON datasets
+│   ├── prado_artworks.json
+│   └── sofia_reina_artworks.json
+├── output/                        # Generated HTML guides
+│   ├── prado_artworks.html
+│   └── sofia_reina_artworks.html
+├── template.html                  # HTML template
+├── generate_guide.py              # Generator script
+└── requirements.txt               # Python dependencies
+```
 
 ## Technical Details
 
@@ -117,18 +164,17 @@ Edit `template.html` to customize:
 - **Print**: Uses CSS `@page` and `page-break-after` for proper pagination
 - **Browser Compatibility**: Works in all modern browsers
 
-## The 10 Artworks Included
+## Example Datasets
 
-1. The Garden of Earthly Delights - Hieronymus Bosch
-2. The Triumph of Death - Pieter Bruegel the Elder
-3. The Descent from the Cross - Rogier van der Weyden
-4. David with the Head of Goliath - Caravaggio
-5. The Nobleman with his Hand on his Chest - El Greco
-6. Las Meninas (The Ladies-in-Waiting) - Diego Velázquez
-7. Charles V at Mühlberg - Titian
-8. The Three Graces - Peter Paul Rubens
-9. The Third of May 1808 - Francisco Goya
-10. Saturn Devouring His Son - Francisco Goya
+### Museo del Prado (`prado_artworks.json`)
+10 masterpieces including:
+- The Garden of Earthly Delights - Hieronymus Bosch
+- Las Meninas - Diego Velázquez
+- The Third of May 1808 - Francisco Goya
+- And 7 more...
+
+### Museo Reina Sofía (`sofia_reina_artworks.json`)
+10 modern art masterpieces
 
 ## License
 
