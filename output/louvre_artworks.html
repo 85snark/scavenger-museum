@@ -1,0 +1,2897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musée du Louvre - The Fun Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            font-size: 11.2px;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            page-break-after: always;
+        }
+
+        .cover-page h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .cover-page h2 {
+            font-size: 2rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* Artwork Pages */
+        .artwork-page {
+            padding: 1.25rem 1.5rem;
+            page-break-after: always;
+            min-height: 100vh;
+        }
+
+        /* Top Section: Info + Image */
+        .top-section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1rem;
+            align-items: start;
+        }
+
+        .artwork-header {
+            padding-bottom: 0.5rem;
+        }
+
+        .image-container {
+            text-align: left;
+        }
+
+        .artwork-image {
+            max-height: 180px;
+            width: auto;
+            border: 3px solid #1f2937;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .artwork-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.56rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            background: linear-gradient(90deg, #8B0000 0%, #DC2626 50%, #F97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            line-height: 1.2;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+        }
+
+        .image-credit {
+            font-size: 0.6rem;
+            color: #888;
+            margin-top: 0.2rem;
+            max-width: 300px;
+        }
+
+        .optional-badge {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1d4ed8;
+            border: 1.5px dashed #3b82f6;
+            border-radius: 4px;
+            padding: 0.1rem 0.45rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .artist-info {
+            font-size: 1.08rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .location-box {
+            margin-top: 0.5rem;
+            font-size: 1.08rem;
+            color: #ea580c;
+        }
+
+        .location-box strong {
+            color: #ea580c;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        /* Section Boxes */
+        .section {
+            border-left: 3px solid #ccc;
+            padding: 0.65rem 0.75rem;
+            background-color: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .section-header {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .section-emoji {
+            font-size: 0.88rem;
+        }
+
+        .section.what-makes-cool {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.what-makes-cool .section-header {
+            color: #ea580c;
+        }
+
+        .section.did-you-notice {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.did-you-notice .section-header {
+            color: #ea580c;
+        }
+
+        .section.mind-blown {
+            border-left-color: #fb923c;
+            background-color: #fff7ed;
+        }
+
+        .section.mind-blown .section-header {
+            color: #ea580c;
+        }
+
+        .section.observation {
+            border-left-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+
+        .section.observation .section-header {
+            color: #1d4ed8;
+        }
+
+        .section-subtitle {
+            font-size: 0.64rem;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 0.35rem;
+        }
+
+        /* List Items */
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section li {
+            margin-bottom: 0.35rem;
+            padding-left: 1.25rem;
+            position: relative;
+            font-size: 0.74rem;
+        }
+
+        .section.what-makes-cool li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #ea580c;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 0.74rem;
+        }
+
+        /* Checkbox Items */
+        .checkbox-item {
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+            padding-left: 0 !important;
+            font-size: 0.74rem;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border: 2px solid #9ca3af;
+            border-radius: 50%;
+            margin-top: 2px;
+            background-color: white;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .cover-page,
+            .artwork-page {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            .artwork-image {
+                max-height: 180px !important;
+                max-width: 300px !important;
+                object-fit: contain;
+            }
+
+            .artwork-title {
+                background: none !important;
+                -webkit-text-fill-color: #8B0000 !important;
+                color: #8B0000 !important;
+            }
+        }
+
+        @page {
+            size: letter;
+            margin: 0.4in 0.5in;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover-page">
+        <h1>Musée du Louvre</h1>
+        <h2>The Fun Guide</h2>
+    </div>
+
+    <!-- Artwork Pages -->
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1280px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Mona Lisa" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">1. Mona Lisa</h1>
+                
+                <p class="artist-info">by Leonardo da Vinci (1452-1519)</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 711 (Salle des États) - Denon Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>The most famous painting in the world, and we're seeing it first, before the crowds arrive!</li>
+                    
+                    <li>Painted in the early 1500s on a wooden panel, not a canvas</li>
+                    
+                    <li>She's smaller than most people expect: about 77 x 53 cm (roughly 2.5 x 1.75 feet)</li>
+                    
+                    <li>She is probably Lisa Gherardini, the wife of a silk merchant in Florence. That's why the Italians call her 'La Gioconda'</li>
+                    
+                    <li>Leonardo never handed it over. He kept working on it for years and brought it with him when he moved to France</li>
+                    
+                    <li>She sits behind thick bulletproof glass in a climate-controlled case</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>She has no eyebrows or eyelashes!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Her smile seems to change depending on whether you look at her eyes or her mouth</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The landscape behind her doesn't line up: the horizon on the left is lower than on the right</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A winding road on the left and a bridge on the right</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Her hands are folded calmly, right hand on top of left</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Soft, smoky edges with no hard outlines. Leonardo's technique is called 'sfumato' (Italian for 'smoky')</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>In 1911 she was stolen by Vincenzo Peruggia, a handyman who had worked at the Louvre. She was missing for over two years until he tried to sell her in Florence.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>While she was gone, crowds came to the Louvre just to stare at the empty space on the wall. The theft is a big reason she became so famous.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Napoleon once hung the Mona Lisa in his bedroom.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>During World War II she was secretly moved from castle to castle around France to keep her safe.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Move from one side of the room to the other. Do her eyes seem to follow you?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the bridge in the background</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count how many phones you can see pointed at her</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Is she bigger or smaller than you expected?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Turn around: what giant painting is hanging right behind you?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_%3B_MR_384.jpg/1280px-Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_%3B_MR_384.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Wedding at Cana" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">2. The Wedding at Cana</h1>
+                
+                <p class="artist-info">by Paolo Veronese (1528-1588)</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 711 (Salle des États) - Denon Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>The BIGGEST painting in the Louvre: almost 7 m tall and 10 m wide (about 22 x 33 feet)!</li>
+                    
+                    <li>It hangs opposite the Mona Lisa, so most visitors stand with their backs to it</li>
+                    
+                    <li>Painted in 1562-63 for the dining hall of a monastery in Venice</li>
+                    
+                    <li>It shows the Bible story where Jesus turns water into wine at a wedding feast</li>
+                    
+                    <li>Veronese turned it into a huge, fancy Venetian party with over 100 people</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Jesus sits right in the middle, with a glowing halo</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A group of musicians playing in the center foreground</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Servants pouring wine out of big stone jars on the right</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Dogs and other animals hiding among the guests</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>People are dressed in fancy 1500s Venetian clothes, not Bible-times clothes</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>In 1797 Napoleon's soldiers took it from Venice. They cut it into pieces to carry it to Paris and stitched it back together.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>After Napoleon lost power, many stolen artworks went back. This one stayed: it was considered too big and fragile to move, and Venice got a different painting instead.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The musicians are traditionally said to be portraits of famous Venetian painters, including Titian and Veronese himself.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count the dogs in the painting</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the hourglass on the musicians' table</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find someone tasting or inspecting the wine</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find Jesus. Is he the only person looking straight at you?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Estimate how many people are in the painting</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg/1280px-Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Leonardo in the Grande Galerie" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">3. Leonardo in the Grande Galerie</h1>
+                
+                <p class="artist-info">by Leonardo da Vinci (1452-1519)</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 710 (Grande Galerie) - Denon Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>The Grande Galerie is one of the longest rooms in Europe. It was built to connect the Louvre to another palace, the Tuileries</li>
+                    
+                    <li>It's home to some of Leonardo's other masterpieces. The Louvre owns more Leonardo paintings than anywhere else in the world</li>
+                    
+                    <li>The Virgin of the Rocks (1480s) shows Mary, baby Jesus, baby John the Baptist and an angel in a rocky cave</li>
+                    
+                    <li>Saint Anne shows Jesus's grandmother, Anne, with Mary sitting on her lap and baby Jesus playing with a lamb</li>
+                    
+                    <li>Leonardo worked on Saint Anne for years and never quite finished it</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The strange, jagged rocks and plants in the Virgin of the Rocks</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The angel pointing at baby John</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>In Saint Anne, Mary is sitting on her mother's lap!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Baby Jesus grabbing a lamb by the ears</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The same soft, smoky style you saw in the Mona Lisa</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>There are TWO versions of the Virgin of the Rocks: this one and another in the National Gallery in London.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The plants in the Virgin of the Rocks are painted so accurately that botanists can identify the species.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The lamb in Saint Anne is a symbol of sacrifice: Mary seems to be pulling Jesus back from it.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find both paintings</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the pointing angel</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look for other Leonardo paintings in the gallery. How many can you find?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look down the gallery. Can you see the end?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Salon_Carr%C3%A9_Ceiling.jpg/1280px-Salon_Carr%C3%A9_Ceiling.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Salon Carré" class="artwork-image">
+                
+                <div class="image-credit">Photo: Sumit Surai, CC BY-SA 4.0</div>
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">4. The Salon Carré</h1>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 708 - Denon Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>This room is a stop because of its history, not just what's on the walls</li>
+                    
+                    <li>From the 1700s, the Royal Academy showed new art here. These shows were called 'the Salon', after this room</li>
+                    
+                    <li>That's why art exhibitions are still called 'salons' today</li>
+                    
+                    <li>After the exhibitions moved out, this room was saved for the museum's very best paintings</li>
+                    
+                    <li>Today it holds early Italian paintings, with lots of gold backgrounds</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The decorated ceiling (look up!)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The glass roof letting in daylight</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Paintings with shining gold backgrounds</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The square shape. 'Carré' means 'square' in French</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The Mona Lisa used to hang here. This is the room she was stolen from in 1911!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>In 1810 Napoleon married his second wife, Marie-Louise, in this room.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Young artists would show their work here hoping to become famous. A good review could make a career.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look up: what figures and shapes can you find on the ceiling?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the painting with the most gold in it</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Imagine the walls covered floor to ceiling with paintings, the way the old Salon looked</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Pick the painting you'd hang in your bedroom</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/V%C3%A9nus_et_les_trois_Gr%C3%A2ces_offrant_des_pr%C3%A9sents_%C3%A0_une_jeune_fille_-_Sandro_Botticelli_-_Mus%C3%A9e_du_Louvre_Peintures_RF_321.jpg/1280px-V%C3%A9nus_et_les_trois_Gr%C3%A2ces_offrant_des_pr%C3%A9sents_%C3%A0_une_jeune_fille_-_Sandro_Botticelli_-_Mus%C3%A9e_du_Louvre_Peintures_RF_321.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Botticelli's Frescoes" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">5. Botticelli's Frescoes</h1>
+                
+                <p class="artist-info">by Sandro Botticelli (c. 1445-1510)</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 706 - Denon Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>These are frescoes: paintings made on wet plaster, right on a wall</li>
+                    
+                    <li>Botticelli also painted the famous Birth of Venus (which is in Florence)</li>
+                    
+                    <li>Painted in the 1480s for a villa near Florence, probably to celebrate a wedding</li>
+                    
+                    <li>One shows Venus and the Three Graces bringing gifts to a young woman</li>
+                    
+                    <li>The other shows a young man being introduced to the Liberal Arts, the subjects people studied back then</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Cracks and missing patches. These were cut out of a real wall!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The Three Graces in flowing dresses</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A row of women in the other fresco, each one representing a subject</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Soft, faded colors, very different from oil paintings</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The frescoes were hidden under a layer of whitewash for centuries and only discovered in 1873.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The Louvre bought them, and they were carefully peeled off the villa's wall and brought to Paris.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The women in the second fresco represent subjects like Grammar, Arithmetic, Music and Astronomy.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count the women in the Liberal Arts fresco</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the young woman receiving gifts</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the biggest missing patch</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If you could pick one subject to study from the fresco, which would it be?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Galerie_d%27Apollon_%28Louvre%29.jpg/1280px-Galerie_d%27Apollon_%28Louvre%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Galerie d'Apollon" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">6. The Galerie d'Apollon</h1>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 705 - Denon Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>A gallery covered in gold, built for King Louis XIV after a fire in 1661</li>
+                    
+                    <li>Its theme is Apollo, the Greek sun god, because Louis XIV called himself the 'Sun King'</li>
+                    
+                    <li>It was the model for the famous Hall of Mirrors at the Palace of Versailles</li>
+                    
+                    <li>The painting in the middle of the ceiling is by Delacroix, who painted Liberty Leading the People (coming up soon!)</li>
+                    
+                    <li>For over 100 years the French crown jewels were displayed here</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Gold decoration on every surface</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Suns and sun-rays all over the decoration</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The ceiling painting of Apollo fighting a giant serpent</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The tall windows on the River Seine side of the gallery</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>This is the scene of a real heist! On October 19, 2025, just after opening time, thieves parked a truck with a lift beside the Seine, rode it up to a balcony, and cut through one of these windows.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>In just a few minutes they smashed two display cases and grabbed eight royal jewels. Then they went back out the window, down the lift, and escaped on motorbikes. One crown was found outside the museum, damaged.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The gallery reopened in July 2026, but without any jewels. The surviving jewels are being moved to a new high-security room.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Delacroix painted his ceiling almost 200 years after the gallery was built, to finish a spot that had been left empty.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find Apollo in the center of the ceiling</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count the suns you can spot</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the windows facing the River Seine. Which one do you think the thieves came through?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look out a window: where could a truck have parked down below?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Victoire_de_Samothrace_-_Musee_du_Louvre_-_20190812.jpg/1280px-Victoire_de_Samothrace_-_Musee_du_Louvre_-_20190812.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Winged Victory of Samothrace" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">7. Winged Victory of Samothrace</h1>
+                
+                <p class="artist-info">by Unknown Greek sculptor</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 703 (top of the Daru Staircase) - Denon Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>This is Nike, the Greek goddess of victory. Yes, the sportswear brand is named after her!</li>
+                    
+                    <li>Carved over 2,000 years ago (around 190 BC)</li>
+                    
+                    <li>She's landing on the front of a warship, probably to celebrate a victory at sea</li>
+                    
+                    <li>She stands at the top of the grand Daru staircase, so visitors climbing up see her towering above them</li>
+                    
+                    <li>Together with her ship, she's over 5.5 m tall</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Her dress looks wet and wind-blown, as if she's flying into the sea breeze</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The base is shaped like the front of a ship</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Her huge wings spread out behind her</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>She has no head and no arms</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>She was found in 1863 on the Greek island of Samothrace in more than 100 pieces.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Her head and arms have never been found. One of her hands turned up in 1950 and is displayed nearby.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Her ship base was found and brought to Paris years after the statue.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find her hand in a glass case nearby</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Walk around her. Is one side more carefully carved than the other? Which side was meant to be seen?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Go a few steps down the staircase and look back up at her</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Where do you think the wind is blowing from?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_%3B_MR_1437.jpg/1280px-Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_%3B_MR_1437.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Coronation of Napoleon" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">8. The Coronation of Napoleon</h1>
+                
+                <p class="artist-info">by Jacques-Louis David (1748-1825)</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 702 (Salle Daru) - Denon Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Another giant: over 6 m tall and almost 10 m wide (about 20 x 32 feet)</li>
+                    
+                    <li>It shows a real event: December 2, 1804, at Notre-Dame Cathedral in Paris</li>
+                    
+                    <li>Napoleon had already crowned himself emperor. Here he's crowning his wife Joséphine as empress</li>
+                    
+                    <li>David was Napoleon's official painter and was there to watch the ceremony</li>
+                    
+                    <li>It took him about three years to paint</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Napoleon holding the crown above Joséphine's head</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Napoleon wearing a golden laurel wreath, like a Roman emperor</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The Pope sitting behind Napoleon with his hand raised in blessing</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Joséphine kneeling, with ladies holding her long velvet train</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Gold, velvet and jewels everywhere!</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Napoleon's mother sits in the place of honor in the center box, but she didn't actually go to the ceremony! Napoleon had David paint her in anyway.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>David's early sketches showed Napoleon crowning himself. He changed it to the gentler moment of Napoleon crowning Joséphine.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>David painted himself into the picture: he's up in the gallery, sketching the scene.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>David painted a second version years later, now at the Palace of Versailles.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find Napoleon's mother in the center box</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find David drawing in the gallery</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the Pope's raised hand</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If you were in this crowd, where would you want to stand?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/1280px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Raft of the Medusa" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">9. The Raft of the Medusa</h1>
+                
+                <p class="artist-info">by Théodore Géricault (1791-1824)</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 700 (Salle Mollien) - Denon Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Based on a real shipwreck: in 1816 the French ship Méduse ran aground off the coast of West Africa</li>
+                    
+                    <li>About 150 people were put on a homemade raft. After 13 days at sea, only 15 survived</li>
+                    
+                    <li>The captain had gotten the job through political connections, not skill. The painting was a huge scandal</li>
+                    
+                    <li>Géricault was only 27 when he painted it</li>
+                    
+                    <li>It's about 5 m tall and over 7 m wide</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A tiny ship on the horizon. That's the rescue ship, the Argus!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A man at the top waving a cloth to get the ship's attention</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>An old man on the left holding a young man who has died</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The torn sail and huge waves</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The bodies are arranged in a pyramid shape that builds up toward the waving man</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Géricault interviewed survivors and even had a model of the raft built in his studio.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>He shaved his head so he would be too embarrassed to go out, and stayed in his studio to work.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>His friend Eugène Delacroix posed for one of the figures. You'll see Delacroix's own painting right next to this one.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Parts of the painting have darkened over time because of a tar-like paint called bitumen.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the rescue ship (it's REALLY small)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count how many people are waving or reaching toward the ship</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the figure lying face-down in the front with an arm stretched out</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How does the painting make you feel: hopeful or hopeless?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/1280px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Liberty Leading the People" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">10. Liberty Leading the People</h1>
+                
+                <p class="artist-info">by Eugène Delacroix (1798-1863)</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 700 (Salle Mollien) - Denon Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Painted in 1830 about a real revolution in Paris: three days of street fighting in July 1830 that pushed out King Charles X</li>
+                    
+                    <li>The woman isn't a real person. She's 'Liberty', an idea turned into a person</li>
+                    
+                    <li>She carries the French flag (blue, white, red) and a musket</li>
+                    
+                    <li>It became a symbol of France and was printed on the old French 100-franc bank note</li>
+                    
+                    <li>It was cleaned and restored in 2024, so the colors are brighter than they've been in a long time</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Liberty is barefoot</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>She wears a red cap, a symbol of freedom since the French Revolution</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A boy next to her waving two pistols</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A man in a top hat holding a gun</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The towers of Notre-Dame Cathedral in the smoky background on the right</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The French government bought the painting, then hid it away for years because they thought it might encourage more revolutions.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The boy with the pistols may have inspired the character Gavroche in Victor Hugo's novel Les Misérables.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Some people think the man in the top hat is Delacroix himself, but nobody knows for sure.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the towers of Notre-Dame</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the three colors of the French flag somewhere else in the painting (look at the clothes!)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count the weapons you can see</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Compare this to the Raft of the Medusa next to it. What's similar? What's different?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Dying_slave_Louvre_MR_1590%2C_Louvre.jpg/1280px-Dying_slave_Louvre_MR_1590%2C_Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Michelangelo's Slaves & Canova's Psyche" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">11. Michelangelo's Slaves & Canova's Psyche</h1>
+                
+                <p class="artist-info">by Michelangelo and Antonio Canova</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 403 - Denon Wing, Level 0
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Two of the most famous sculptors ever, in one room</li>
+                    
+                    <li>Michelangelo (1475-1564) carved the Dying Slave and the Rebellious Slave for the tomb of Pope Julius II</li>
+                    
+                    <li>The tomb plans changed and they were never used. Michelangelo gave them away, and they ended up with the King of France</li>
+                    
+                    <li>Canova (1757-1822) carved Psyche Revived by Cupid's Kiss about 270 years later</li>
+                    
+                    <li>In the myth, Psyche falls into a deep sleep and Cupid wakes her with a kiss</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The Slaves are unfinished. Look for chisel marks!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The Dying Slave looks like he's falling asleep, while the Rebellious Slave is twisting to break free</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Cupid's wings and the way the two figures make an X shape</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>How smooth and soft Canova's marble looks, almost like skin</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Behind the Dying Slave is a rough shape of a monkey, still half stuck in the stone.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Michelangelo said he imagined the figure was already inside the marble and he just had to free it.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Canova's statue was originally fitted with a handle so it could be turned and seen from every angle.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the monkey shape behind the Dying Slave</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find a spot where you can see chisel marks</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Walk all the way around Psyche and Cupid. Which view do you like best?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Which looks more 'alive' to you: Michelangelo's or Canova's?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Inside_the_Louvre_Pyramid_July_2025.jpg/1280px-Inside_the_Louvre_Pyramid_July_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Louvre Pyramid" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">12. The Louvre Pyramid</h1>
+                
+                <p class="artist-info">by I. M. Pei (1917-2019)</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> View from the window by Room 404 - Denon Wing, Level 0
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>The glass pyramid you walked under to get in is a modern work of architecture</li>
+                    
+                    <li>Designed by architect I. M. Pei and opened in 1989</li>
+                    
+                    <li>It's about 21 m (70 feet) tall</li>
+                    
+                    <li>It made the entrance big enough for millions of visitors and lets daylight into the hall underground</li>
+                    
+                    <li>It's one of the most photographed buildings in the world</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>It's made of diamond and triangle shaped glass panes</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>You can see the old palace right through the glass</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The glass is extra clear, so it doesn't look green like normal window glass</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Fountains and pools around it</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>When it was first proposed, lots of people in Paris HATED the idea of a modern glass pyramid at an old royal palace.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A famous rumor says it has exactly 666 panes. It actually has 673.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>There's an upside-down pyramid too, in the shopping area under the Carrousel.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count the glass diamonds along one edge</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the smaller pyramids nearby</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What shapes do you see in the reflection?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Old palace + modern pyramid: do they go together? Why or why not?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_%3B_N_527_%3B_Ma_399.jpg/1280px-V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_%3B_N_527_%3B_Ma_399.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Venus de Milo" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">13. Venus de Milo</h1>
+                
+                <p class="artist-info">by Unknown Greek sculptor</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 345 - Sully Wing, Level 0
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>One of the most famous statues in the world</li>
+                    
+                    <li>Carved in Greece around 150-125 BC</li>
+                    
+                    <li>She's probably Aphrodite, the Greek goddess of love. Venus is her Roman name</li>
+                    
+                    <li>Found in 1820 by a farmer on the Greek island of Milos (that's the 'de Milo' part)</li>
+                    
+                    <li>She's just over 2 m tall, taller than most adults</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>No arms!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Her body twists, with her weight on one leg</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Her clothes are slipping down around her hips</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Small holes where metal jewelry was probably once attached</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Nobody knows what her arms were doing. People have guessed she held an apple, a mirror or a shield.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>She's carved from two separate blocks of marble joined at the hips.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>During World War II she was hidden in a castle in the French countryside to keep her safe.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Guess what her arms were doing, then try the pose yourself</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find where the two blocks of marble meet</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Walk all the way around her. Does she look different from the back?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find a jewelry hole</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Salle_des_Cariatides_in_Paris-Louvre.jpg/1280px-Salle_des_Cariatides_in_Paris-Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Salle des Caryatides & Diana of Versailles" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">14. Salle des Caryatides & Diana of Versailles</h1>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 348 - Sully Wing, Level 0
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>One of the oldest rooms in the Louvre palace, from the 1550s</li>
+                    
+                    <li>The four giant women holding up the balcony are caryatids (columns shaped like people), carved by Jean Goujon</li>
+                    
+                    <li>The balcony was for musicians playing at royal parties</li>
+                    
+                    <li>The room is full of ancient Greek and Roman statues that belonged to the kings of France</li>
+                    
+                    <li>Diana the Huntress was a gift from the Pope to King Henry II in 1556</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The musicians' gallery above the door (look behind you as you come in)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Diana reaching over her shoulder for an arrow</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A deer leaping beside Diana</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A sleeping figure lying on a marble mattress</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The playwright Molière performed for the young King Louis XIV in this room in 1658.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The marble mattress under the sleeping figure was carved by the famous sculptor Bernini in 1619. It looks soft enough to sleep on!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Diana is a Roman copy of a lost Greek bronze statue.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count the caryatids</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the deer</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the marble mattress and see if it really looks soft</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find your favorite animal in the room's statues</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg/1280px-Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Seated Scribe" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                <div class="optional-badge">Optional stop</div>
+                <h1 class="artwork-title">15. The Seated Scribe</h1>
+                
+                <p class="artist-info">by Unknown Egyptian sculptor</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 635 - Sully Wing, Level 1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Over 4,500 years old, made in ancient Egypt during the time the pyramids were built</li>
+                    
+                    <li>A scribe was someone who could read and write, an important job when most people couldn't</li>
+                    
+                    <li>He's made of painted limestone, and lots of the original paint survives</li>
+                    
+                    <li>Found in 1850 at Saqqara, an ancient Egyptian burial ground</li>
+                    
+                    <li>He's small: only about 54 cm (21 inches) tall</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>His eyes look incredibly real</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>He's sitting cross-legged with a scroll of papyrus on his lap</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>His hand is curled to hold a writing brush that's now missing</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A bit of a belly, a sign he was well-fed and important</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>His eyes are made of rock crystal and other stones, set in copper, so they catch the light like real eyes.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Nobody knows who he was. His name has been lost.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>He has been watching people for about 4,500 years.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Move side to side. Do his eyes follow you?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find his missing pen (where would it go?)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Sit the way he's sitting. How long could you stay like that?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What do you think he's about to write?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Grand_sphinx_de_Tanis_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_N_23_%3B_A_23_%3B_Salt_3837.jpg/1280px-Grand_sphinx_de_Tanis_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_N_23_%3B_A_23_%3B_Salt_3837.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Great Sphinx of Tanis" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">16. Great Sphinx of Tanis</h1>
+                
+                <p class="artist-info">by Unknown Egyptian sculptor</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 338 (Crypt of the Sphinx) - Sully Wing, Level -1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>One of the biggest sphinxes outside of Egypt: almost 5 m long</li>
+                    
+                    <li>Carved from a single block of pink granite</li>
+                    
+                    <li>A sphinx has the body of a lion and the head of a pharaoh, showing strength and royal power</li>
+                    
+                    <li>It may be over 4,000 years old</li>
+                    
+                    <li>It was found at Tanis, an ancient city in Egypt, and came to the Louvre in 1826</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The lion's paws and body</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The royal headdress (called a nemes) with stripes</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Hieroglyphs carved on the base and chest</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Oval frames around some of the hieroglyphs</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Several pharaohs, living hundreds of years apart, carved their own names on it to claim it as theirs!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The ovals are called cartouches. Each one holds a pharaoh's name.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Because of all the name changes, experts still argue about exactly when it was first made.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count the cartouches (oval name frames) you can find</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the lion's tail</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Look at its face. Does it look friendly or fierce?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Strike a sphinx pose!</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Corner_of_the_ditches_of_the_medieval_Louvre_2.jpg/1280px-Corner_of_the_ditches_of_the_medieval_Louvre_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Medieval Louvre" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                
+                <h1 class="artwork-title">17. The Medieval Louvre</h1>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Medieval Louvre - Sully Wing, Level -1
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Before it was a palace or a museum, the Louvre was a CASTLE</li>
+                    
+                    <li>King Philippe Auguste built it around 1190-1202 to protect Paris</li>
+                    
+                    <li>You're walking at the bottom of the castle's real moat</li>
+                    
+                    <li>These are the actual walls of the castle and the base of its great round tower (the keep)</li>
+                    
+                    <li>The castle was knocked down in the 1500s to make room for a palace, and buried</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Huge, rough stone blocks</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The curved base of the round tower</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A support pillar for the old drawbridge</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Symbols carved into some of the stones</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>These walls were forgotten for centuries and only dug up in the 1980s, when the Pyramid was being built.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The carved symbols are stonemasons' marks: each worker had his own sign so he could get paid for the stones he cut.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Archaeologists found pieces of a golden royal helmet in an old well here. It belonged to King Charles VI.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find a stonemason's mark. Some look like hearts!</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the drawbridge support</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Stand in the moat and look up. How hard would it be to attack this castle?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the royal helmet on display</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Lamassu_sous_la_forme_d%27un_taureau_androc%C3%A9phale_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_orientales_AO_19857.jpg/1280px-Lamassu_sous_la_forme_d%27un_taureau_androc%C3%A9phale_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_orientales_AO_19857.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Lamassu (Winged Bulls)" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                <div class="optional-badge">Optional stop</div>
+                <h1 class="artwork-title">18. The Lamassu (Winged Bulls)</h1>
+                
+                <p class="artist-info">by Assyrian sculptors</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 229 (Cour Khorsabad) - Richelieu Wing, Level 0
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>Giant guardians with the body of a bull, the wings of an eagle and the head of a man</li>
+                    
+                    <li>Made around 2,700 years ago for the palace of the Assyrian King Sargon II, in what is now Iraq</li>
+                    
+                    <li>They stood at the palace gates to protect the king and scare away evil</li>
+                    
+                    <li>Each one is over 4 m tall and carved from a single block of stone</li>
+                    
+                    <li>French explorers dug up this palace in the 1840s, the first big dig of ancient Assyria</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The curly beard and hair</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A tall hat with horns, a sign of a god</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Big feathered wings along the sides</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Writing carved between the legs</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>They have FIVE legs! From the front they look like they're standing still, and from the side they look like they're walking.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The writing is cuneiform, one of the oldest writing systems in the world, made with wedge shapes.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Moving them was a massive job. They weigh many tons.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Count the legs: first from the front, then from the side</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the horns on the hat</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the cuneiform writing</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Which would scare you more if you were an enemy: the face or the size?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Code_of_Hammurabi-Sb_8-IMG_7753-gradient.jpg/1280px-Code_of_Hammurabi-Sb_8-IMG_7753-gradient.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Code of Hammurabi" class="artwork-image">
+                
+                <div class="image-credit">Photo: Rama, CC BY-SA 3.0 fr</div>
+                
+            </div>
+            <div class="artwork-header">
+                <div class="optional-badge">Optional stop</div>
+                <h1 class="artwork-title">19. The Code of Hammurabi</h1>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 227 - Richelieu Wing, Level 0
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>One of the oldest written sets of laws in the world, about 3,750 years old</li>
+                    
+                    <li>Made for Hammurabi, King of Babylon (in what is now Iraq)</li>
+                    
+                    <li>It lists 282 laws about trade, family, property and crime</li>
+                    
+                    <li>It's where the famous idea 'an eye for an eye' comes from</li>
+                    
+                    <li>It's carved in black stone and is over 2 m tall</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The picture at the top: King Hammurabi standing in front of the sun god Shamash</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Flames or rays coming from Shamash's shoulders</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Tiny wedge-shaped writing covering the stone</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A smooth, blank patch near the bottom</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>It wasn't found in Babylon! An enemy king carried it off as war loot to Susa, in what is now Iran, where French archaeologists found it in 1901.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>That enemy king had some of the laws scraped off, probably to add his own message, which was never carved. That's the blank patch.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Shamash was the god of justice, so the picture shows the laws as coming from the gods.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the blank patch where laws were scraped away</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find Shamash's flames</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find what Shamash is handing to the king (a rod and a ring)</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>If you could add one law, what would it be?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="artwork-page">
+        <div class="top-section">
+            <div class="image-container">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Johannes_Vermeer_-_The_lacemaker_%28c.1669-1671%29.jpg/1280px-Johannes_Vermeer_-_The_lacemaker_%28c.1669-1671%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The Lacemaker" class="artwork-image">
+                
+            </div>
+            <div class="artwork-header">
+                <div class="optional-badge">Optional stop</div>
+                <h1 class="artwork-title">20. The Lacemaker</h1>
+                
+                <p class="artist-info">by Johannes Vermeer (1632-1675)</p>
+                
+                <div class="location-box">
+                    <strong>Location:</strong> Room 837 - Richelieu Wing, Level 2
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Top Left: What Makes This Cool -->
+            <div class="section what-makes-cool">
+                <div class="section-header">
+                    <span class="section-emoji">🤔</span>
+                    <span>What makes this cool</span>
+                </div>
+                <ul>
+                    
+                    <li>A tiny painting, only about 24 x 21 cm, smaller than a sheet of paper!</li>
+                    
+                    <li>Painted around 1669-1670 in the Netherlands</li>
+                    
+                    <li>Only about 35 paintings by Vermeer exist, so each one is a treasure</li>
+                    
+                    <li>It shows a young woman concentrating hard on making lace</li>
+                    
+                    <li>Vermeer was a master of quiet everyday scenes and soft light</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Top Right: Did You Notice? -->
+            <div class="section did-you-notice">
+                <div class="section-header">
+                    <span class="section-emoji">👀</span>
+                    <span>Did you notice?</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Red and white threads spilling out of the sewing cushion, painted almost like drips of paint</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The thin threads she's working on are sharp, while things closer to us are blurry</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Bobbins and pins in her hands</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>A small book on the table</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Left: Mind Blown! -->
+            <div class="section mind-blown">
+                <div class="section-header">
+                    <span class="section-emoji">🤯</span>
+                    <span>Mind Blown!</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>The blurry foreground is like a camera that's out of focus. Some experts think Vermeer used lenses to study light.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Salvador Dalí was obsessed with this painting and came to the Louvre to copy it.</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>After all the giant paintings today, this is one of the smallest famous paintings in the museum.</div>
+                </div>
+                
+            </div>
+
+            <!-- Bottom Right: Observation Challenge -->
+            <div class="section observation">
+                <div class="section-header">
+                    <span class="section-emoji">🔎</span>
+                    <span>Observation Challenge</span>
+                </div>
+                <div class="section-subtitle">Mark each one as you go!</div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Measure it with your hands. How many hand-widths wide is it?</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find the red thread</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>Find something blurry and something sharp</div>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <div>What do you think she's thinking about?</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,533 @@
+{
+  "museum_name": "Musée d'Orsay",
+  "guide_title": "The Fun Guide",
+  "artworks": [
+    {
+      "id": 1,
+      "title": "Luncheon on the Grass",
+      "artist": "Édouard Manet",
+      "artist_years": "1832-1883",
+      "location": "Level 5 - Impressionist galleries (likely room 29, check map)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg/1280px-Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/904",
+      "what_makes_cool": [
+        "We're starting at the top floor first thing, before the crowds fill the Impressionist rooms!",
+        "Painted in 1863, it caused one of the biggest scandals in art history",
+        "It shows a picnic: two men in modern suits sitting with a woman who has no clothes on",
+        "The official art show, the Salon, rejected it. It was shown in the 'Salon of the Rejected' instead, and people came to laugh at it",
+        "Manet painted it flat and bright, ignoring the smooth, polished style the experts expected"
+      ],
+      "did_you_notice": [
+        "The woman is looking straight at YOU",
+        "A picnic basket tipped over, with fruit and bread spilling out",
+        "A second woman bathing in the stream behind them. She looks too big for how far away she is!",
+        "A little bird flying at the top of the painting",
+        "The men are dressed for the city, not for a picnic"
+      ],
+      "mind_blown": [
+        "Manet copied the poses of the three figures from an old print of a painting by Raphael, a famous Renaissance artist.",
+        "The woman is Victorine Meurent, Manet's favorite model. You'll see her again downstairs in Olympia!",
+        "Claude Monet liked this painting so much that he painted his own 'Luncheon on the Grass' in response."
+      ],
+      "observation_challenge": [
+        "Find the bird",
+        "Find the spilled food in the corner",
+        "Find the frog hiding in the bottom left corner",
+        "Why do you think people were so upset by this painting?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "La Gare Saint-Lazare",
+      "artist": "Claude Monet",
+      "artist_years": "1840-1926",
+      "location": "Level 5 - Impressionist galleries (check map for room)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/La_Gare_Saint-Lazare_-_Claude_Monet.jpg/1280px-La_Gare_Saint-Lazare_-_Claude_Monet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:La_Gare_Saint-Lazare_-_Claude_Monet.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/10897",
+      "what_makes_cool": [
+        "A painting of a TRAIN STATION, hanging inside a train station!",
+        "Monet painted Saint-Lazare station in Paris around a dozen times in 1877",
+        "He loved how the steam and smoke changed the light",
+        "Monet was one of the founders of Impressionism: catching a quick 'impression' of light instead of every detail",
+        "Nearby: his Rouen Cathedral series. He painted the same church front over 30 times at different times of day"
+      ],
+      "did_you_notice": [
+        "Clouds of blue and white steam filling the station",
+        "The glass and iron roof, a lot like the one over the Orsay's own main hall",
+        "A dark locomotive coming toward you",
+        "Tiny, blurry people on the platforms",
+        "The Rouen Cathedral paintings nearby: the same building in different colors"
+      ],
+      "mind_blown": [
+        "According to his friend Renoir, Monet put on his best clothes and talked the station manager into holding up the trains and piling coal in the engines so they'd make more steam for him to paint.",
+        "In the Rouen Cathedral paintings, the building never changes. Only the light does. That was Monet's whole point.",
+        "When Impressionism was new, critics said these paintings looked unfinished. Today they're some of the most loved paintings in the world."
+      ],
+      "observation_challenge": [
+        "Find the locomotive",
+        "Compare two Rouen Cathedral paintings. What time of day do you think each one shows?",
+        "Step back, then step close. When does the steam look most real?",
+        "Look up at the Orsay's ceiling later. Does it remind you of this station?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Bal du Moulin de la Galette",
+      "artist": "Pierre-Auguste Renoir",
+      "artist_years": "1841-1919",
+      "location": "Level 5 - Impressionist galleries (check map for room)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Renoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg/1280px-Renoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Renoir,_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette,_1876.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/497",
+      "what_makes_cool": [
+        "A Sunday afternoon dance party in Montmartre, a hilltop neighborhood of Paris, in 1876",
+        "The Moulin de la Galette was an outdoor dance garden next to an old windmill",
+        "A 'galette' is a flat cake. The windmill was famous for them",
+        "Renoir's friends posed as the dancers and people chatting at the tables",
+        "It's one of the happiest paintings in the whole museum"
+      ],
+      "did_you_notice": [
+        "Spots of sunlight coming through the trees, landing on hats, jackets and the ground",
+        "Lots of straw hats",
+        "A girl in a pink-and-blue striped dress in the front",
+        "Couples dancing in the background",
+        "Lamps hanging above the crowd"
+      ],
+      "mind_blown": [
+        "Renoir rented a studio nearby so he could carry the big canvas to the dance garden and paint it on the spot.",
+        "Renoir also painted a smaller version, which sold in 1990 for about $78 million, at the time one of the most expensive paintings ever sold.",
+        "Renoir worked as a painter of porcelain plates as a teenager, before he became a famous artist."
+      ],
+      "observation_challenge": [
+        "Count the straw hats",
+        "Find the brightest spot of sunlight",
+        "Find a couple dancing and a person sitting alone",
+        "Which person in the painting would you want to talk to?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Little Dancer Aged Fourteen",
+      "artist": "Edgar Degas",
+      "artist_years": "1834-1917",
+      "location": "Level 5 - Impressionist galleries (check map for room)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Danseuse2_degas_Musee_Orsay.jpg/1280px-Danseuse2_degas_Musee_Orsay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Danseuse2_degas_Musee_Orsay.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/961",
+      "what_makes_cool": [
+        "A sculpture of a young ballet student, wearing a REAL fabric tutu and a satin hair ribbon",
+        "The model was Marie van Goethem, a student at the Paris Opera ballet school",
+        "Degas made the original out of wax in 1881. This is a bronze cast made after he died",
+        "Degas made more art about dancers than about anything else",
+        "Nearby: his painting The Ballet Class, showing young dancers at a lesson"
+      ],
+      "did_you_notice": [
+        "The real tulle tutu and satin ribbon",
+        "Her hands clasped behind her back",
+        "Her chin tilted up, and her eyes almost closed",
+        "In The Ballet Class: the old teacher leaning on a tall stick",
+        "In The Ballet Class: a girl sitting on the piano, scratching her back!"
+      ],
+      "mind_blown": [
+        "When Degas first showed her, critics were shocked. Sculptures were supposed to be marble goddesses, not real working-class kids.",
+        "The original wax version even had real human hair. It's now at the National Gallery of Art in Washington.",
+        "Degas only showed this sculpture once in his life."
+      ],
+      "observation_challenge": [
+        "Copy her pose. Is it comfortable?",
+        "Find the girl scratching her back in The Ballet Class",
+        "Count how many dancers you can find in Degas's paintings in this room",
+        "Walk around her. What does she look like from behind?"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "The Floor Scrapers",
+      "optional": true,
+      "artist": "Gustave Caillebotte",
+      "artist_years": "1848-1894",
+      "location": "Level 5 - Impressionist galleries (check map for room)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Gustave_Caillebotte_-_The_Floor_Planers_-_Google_Art_Project.jpg/1280px-Gustave_Caillebotte_-_The_Floor_Planers_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_The_Floor_Planers_-_Google_Art_Project.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/105",
+      "what_makes_cool": [
+        "Three workers scraping a wooden floor smooth, painted in 1875",
+        "Back then, paintings of ordinary workers like this were very unusual",
+        "The Salon rejected it for being 'vulgar', so Caillebotte showed it with the Impressionists instead",
+        "The room is thought to be in Caillebotte's own family home"
+      ],
+      "did_you_notice": [
+        "Curly wood shavings all over the floor",
+        "A wine bottle and glass on the floor near the workers",
+        "Light from the window shining on the workers' backs and arms",
+        "Some of the floor is scraped and some isn't yet"
+      ],
+      "mind_blown": [
+        "Caillebotte was rich, and he bought lots of paintings from his struggling Impressionist friends to help them out.",
+        "When he died, he left his collection to France. It's a big reason this museum has so many Impressionist masterpieces!",
+        "The floor seems to tilt up toward you, which pulls you right into the room."
+      ],
+      "observation_challenge": [
+        "Find the wine bottle",
+        "Count the curls of wood",
+        "Which part of the floor is finished?",
+        "Try their pose (kneeling). How long could you work like that?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "The Giant Clock Window",
+      "location": "Level 5 - by Café Campana",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Clock_Window_at_D%27orsay.JPG/1280px-Clock_Window_at_D%27orsay.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Clock_Window_at_D%27orsay.JPG",
+      "image_license": "CC BY-SA 3.0",
+      "image_credit": "Parisecrivain10",
+      "source_url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay",
+      "what_makes_cool": [
+        "The museum used to be a train station: the Gare d'Orsay, opened in 1900",
+        "Station clocks had to be huge so travelers could see the time from far away",
+        "From inside you're standing BEHIND the clock face, looking out through it",
+        "Through the glass you can see across the River Seine",
+        "One of the most photographed spots in Paris"
+      ],
+      "did_you_notice": [
+        "The clock numbers are backwards from in here!",
+        "The hands and gears in the middle of the face",
+        "The view across the river toward the Louvre",
+        "Sacré-Cœur, the white church on the hill of Montmartre, in the distance"
+      ],
+      "mind_blown": [
+        "You saw Montmartre in Renoir's painting. You can see the real hill from here!",
+        "The station was built in just two years, in time for the 1900 World's Fair in Paris.",
+        "The café next to the clock is set in what was once part of the station hotel."
+      ],
+      "observation_challenge": [
+        "Read the time backwards",
+        "Find Sacré-Cœur",
+        "Find the Louvre across the river",
+        "Take a silhouette photo in front of the clock"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Van Gogh: Starry Night Over the Rhône",
+      "artist": "Vincent van Gogh",
+      "artist_years": "1853-1890",
+      "location": "Level 5 - Post-Impressionist galleries (likely room 36, check map)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/78696",
+      "what_makes_cool": [
+        "Painted in 1888 by the River Rhône in the town of Arles, in the south of France",
+        "Van Gogh painted it outside, at night, by the light of the gas lamps",
+        "He painted it the year BEFORE his more famous 'The Starry Night', which is in New York",
+        "In the same room: one of his self-portraits (1889) and a version of his Bedroom in Arles",
+        "Van Gogh barely sold any paintings during his lifetime. Now he's one of the most famous artists ever"
+      ],
+      "did_you_notice": [
+        "Golden reflections of the gas lamps in the water",
+        "A couple walking along the riverbank",
+        "Thick, chunky brushstrokes you could almost touch",
+        "In the self-portrait: the swirling blue background",
+        "In the Bedroom: two chairs, two pillows and pictures hanging on the walls"
+      ],
+      "mind_blown": [
+        "You can find the Big Dipper (a group of seven stars) in the sky above the river.",
+        "Van Gogh painted over 35 self-portraits, partly because he couldn't afford to pay models.",
+        "He painted his Bedroom three times. This version is a smaller copy he made for his mother and sister."
+      ],
+      "observation_challenge": [
+        "Find the seven stars of the Big Dipper",
+        "Find the couple",
+        "In the self-portrait, what colors can you find in his beard?",
+        "In the Bedroom, do the walls and floor look straight to you?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Tahitian Women",
+      "artist": "Paul Gauguin",
+      "artist_years": "1848-1903",
+      "location": "Level 5 - Post-Impressionist galleries (check map for room)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Paul_Gauguin_056.jpg/1280px-Paul_Gauguin_056.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_056.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/290",
+      "what_makes_cool": [
+        "Gauguin left Paris in 1891 and sailed to Tahiti, an island in the South Pacific",
+        "This painting of two women on the beach is from his first year there",
+        "He used flat, bold blocks of color instead of soft Impressionist dabs",
+        "Before he was a full-time artist, Gauguin worked as a stockbroker"
+      ],
+      "did_you_notice": [
+        "One woman wears a pink dress, the other a traditional wrap called a pareo",
+        "Strong outlines around the shapes",
+        "Bright, flat colors with almost no shadow",
+        "The women seem lost in thought, not looking at us"
+      ],
+      "mind_blown": [
+        "Gauguin lived and painted with Van Gogh in Arles in 1888. It lasted only about nine weeks and ended in a famous falling-out.",
+        "His bold flat colors inspired later artists like Matisse and Picasso.",
+        "Gauguin spent most of the rest of his life in the South Pacific."
+      ],
+      "observation_challenge": [
+        "Find the outlines around the shapes",
+        "Find the brightest color in the painting",
+        "Compare this to Van Gogh's brushstrokes. How are they different?",
+        "What do you think the women are thinking about?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "The Circus",
+      "optional": true,
+      "artist": "Georges Seurat",
+      "artist_years": "1859-1891",
+      "location": "Level 5 - Post-Impressionist galleries (check map for room)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Georges_Seurat_-_The_Circus_-_Google_Art_Project.jpg/1280px-Georges_Seurat_-_The_Circus_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_The_Circus_-_Google_Art_Project.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/542",
+      "what_makes_cool": [
+        "Painted entirely with tiny dots of color! This style is called pointillism",
+        "From a distance, your eyes mix the dots into shapes and colors",
+        "It shows a circus show in Paris in 1891",
+        "Seurat died that same year, at just 31. The painting was left unfinished"
+      ],
+      "did_you_notice": [
+        "A clown in the front with his back to us",
+        "A rider standing on a galloping white horse",
+        "An acrobat flipping through the air",
+        "The audience sitting in rows"
+      ],
+      "mind_blown": [
+        "Seurat even painted the frame with dots!",
+        "He studied color science to work out which dots to put side by side.",
+        "The people in the cheapest seats at the back look much less excited than the fancy people in front."
+      ],
+      "observation_challenge": [
+        "Get close (not too close!) and find the separate dots",
+        "Step back. At what distance do the dots disappear?",
+        "Find the acrobat",
+        "Find the painted frame"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "The Gates of Hell",
+      "artist": "Auguste Rodin",
+      "artist_years": "1840-1917",
+      "location": "Level 2 - sculpture terraces (check map)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Auguste_Rodin-Gates_of_Hell-Mus%C3%A9e_d%27Orsay.jpg/1280px-Auguste_Rodin-Gates_of_Hell-Mus%C3%A9e_d%27Orsay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Auguste_Rodin-Gates_of_Hell-Mus%C3%A9e_d%27Orsay.jpg",
+      "image_license": "CC BY-SA 3.0",
+      "image_credit": "Yair Haklai",
+      "source_url": "https://en.wikipedia.org/wiki/The_Gates_of_Hell",
+      "what_makes_cool": [
+        "A giant doorway, about 6 m (20 feet) tall, covered in twisting figures",
+        "It's the plaster model, the version Rodin worked on with his own hands",
+        "It was ordered in 1880 for a new museum's doors, but that museum was never built",
+        "Rodin kept working on it for 37 years, until he died",
+        "It shows scenes from Dante's Inferno, a famous medieval poem about a journey through hell"
+      ],
+      "did_you_notice": [
+        "A man sitting at the top, chin on his hand, thinking",
+        "Over a hundred tiny bodies climbing, falling and tumbling",
+        "Three figures standing on the very top, all pointing down",
+        "The door doesn't actually open!"
+      ],
+      "mind_blown": [
+        "The thinking man at the top became Rodin's most famous sculpture, The Thinker, made big and on his own.",
+        "Rodin's famous sculpture The Kiss also started out as part of these gates.",
+        "Bronze copies of the gates were only cast after Rodin died."
+      ],
+      "observation_challenge": [
+        "Find the Thinker",
+        "Find the three figures on top",
+        "Count as many figures as you can in one minute",
+        "If you made your own gate, what would you put on it?"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "The Station Hotel Ballroom",
+      "location": "Level 2 - Salle des fêtes, Seine side (check map)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Mus%C3%A9e_d%27Orsay_-_salle_des_f%C3%AAtes_01.jpg/1280px-Mus%C3%A9e_d%27Orsay_-_salle_des_f%C3%AAtes_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_d%27Orsay_-_salle_des_f%C3%AAtes_01.jpg",
+      "image_license": "CC BY-SA 3.0",
+      "image_credit": "Chatsam",
+      "source_url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay",
+      "what_makes_cool": [
+        "The train station had its own grand hotel, and this was its ballroom",
+        "Travelers could step off a train and go straight to a fancy party",
+        "It looks almost exactly as it did around 1900",
+        "Mirrors, gold, chandeliers and painted ceilings: a palace room inside a station"
+      ],
+      "did_you_notice": [
+        "Crystal chandeliers hanging from the ceiling",
+        "Huge mirrors making the room look even bigger",
+        "Gold decoration everywhere",
+        "Painted sky and clouds on the ceiling"
+      ],
+      "mind_blown": [
+        "The hotel stayed open long after the trains stopped, until 1973.",
+        "The museum's restaurant is in the hotel's old dining room, which is just as fancy.",
+        "Around 1900, the most modern buildings were decorated to look like palaces from the past."
+      ],
+      "observation_challenge": [
+        "Count the chandeliers",
+        "Find yourself in a mirror",
+        "Find a face or figure in the ceiling decoration",
+        "Imagine a party here in 1900. What would people be wearing?"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Olympia",
+      "artist": "Édouard Manet",
+      "artist_years": "1832-1883",
+      "location": "Level 0 (likely room 14, check map)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Edouard_Manet_-_Olympia_-_Google_Art_Project_3.jpg/1280px-Edouard_Manet_-_Olympia_-_Google_Art_Project_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Olympia_-_Google_Art_Project_3.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/712",
+      "what_makes_cool": [
+        "Painted in 1863 and shown in 1865. Another huge Manet scandal!",
+        "Manet based it on a famous Renaissance painting of Venus by Titian, but made his woman a modern Parisian",
+        "People were so angry that guards had to protect the painting at the exhibition",
+        "Today it's seen as one of the paintings that started modern art"
+      ],
+      "did_you_notice": [
+        "She's looking straight at you, just like in Luncheon on the Grass",
+        "A maid bringing her a big bunch of flowers",
+        "A black cat with its back arched at the end of the bed",
+        "Strong, flat light with very little shadow"
+      ],
+      "mind_blown": [
+        "The model is Victorine Meurent, the same woman as in Luncheon on the Grass upstairs!",
+        "In Titian's painting there's a sleeping dog, a symbol of loyalty. Manet swapped it for a hissing black cat.",
+        "After Manet died, Claude Monet raised money from his friends to buy Olympia and give it to France."
+      ],
+      "observation_challenge": [
+        "Find the cat. What's it doing?",
+        "Find the flowers",
+        "Compare her face to the woman in Luncheon on the Grass",
+        "How does she seem to feel about being looked at?"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "The Gleaners",
+      "artist": "Jean-François Millet",
+      "artist_years": "1814-1875",
+      "location": "Level 0 (check map for room)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Jean-Fran%C3%A7ois_Millet_-_Des_glaneuses.jpg/1280px-Jean-Fran%C3%A7ois_Millet_-_Des_glaneuses.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_Des_glaneuses.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/342",
+      "what_makes_cool": [
+        "Three women picking up the leftover grains of wheat after a harvest. That's called 'gleaning'",
+        "Gleaning was something only the poorest people did",
+        "Painted in 1857, when big paintings were usually saved for kings, gods and heroes",
+        "Nearby: Millet's The Angelus, showing two farmworkers stopping to pray when the church bell rings"
+      ],
+      "did_you_notice": [
+        "Huge haystacks and a busy harvest in the background",
+        "A man on a horse in the distance, watching the workers",
+        "The three women all bent over in different poses",
+        "In The Angelus: the church tower far away on the horizon"
+      ],
+      "mind_blown": [
+        "Some rich viewers found it threatening. It made them think about how unfair life was for the poor.",
+        "Salvador Dalí was obsessed with The Angelus. He was sure something was hidden under the basket, and an X-ray later showed a dark shape there.",
+        "The Angelus was sold to an American collector, and then a French businessman paid a fortune to bring it back to France."
+      ],
+      "observation_challenge": [
+        "Find the man on the horse",
+        "Copy the gleaners' pose for 10 seconds. How does your back feel?",
+        "In The Angelus, find the church tower",
+        "Compare the rich harvest behind with the poor women in front"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "A Burial at Ornans",
+      "optional": true,
+      "artist": "Gustave Courbet",
+      "artist_years": "1819-1877",
+      "location": "Level 0 (check map for room)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg/1280px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://www.musee-orsay.fr/fr/oeuvres/924",
+      "what_makes_cool": [
+        "Huge: over 3 m tall and almost 7 m wide (about 10 x 22 feet)",
+        "It shows a funeral in Ornans, Courbet's small hometown",
+        "Painting ordinary people life-size at this scale was shocking in 1850. That size was for kings and heroes",
+        "The people are real townspeople, painted as they really looked"
+      ],
+      "did_you_notice": [
+        "A dog in the front",
+        "The open grave at the bottom",
+        "A priest, altar boys and a man holding a cross",
+        "Women in black crying into handkerchiefs"
+      ],
+      "mind_blown": [
+        "Courbet started a movement called Realism: painting real life, not idealized stories.",
+        "He said he couldn't paint an angel because he had never seen one.",
+        "Over 40 people are packed into the scene."
+      ],
+      "observation_challenge": [
+        "Find the dog",
+        "Find the cross",
+        "Count the people in the painting",
+        "Does it feel like you're at the funeral too?"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "The Station Hall",
+      "location": "Level 0 - central nave (then exit)",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Main_hall_of_the_Mus%C3%A9e_d%27Orsay_01.jpg/1280px-Main_hall_of_the_Mus%C3%A9e_d%27Orsay_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Main_hall_of_the_Mus%C3%A9e_d%27Orsay_01.jpg",
+      "image_license": "CC BY-SA 4.0",
+      "image_credit": "John Samuel",
+      "source_url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay",
+      "what_makes_cool": [
+        "This huge hall is where the trains used to come in. The tracks ran right where you're standing!",
+        "The station was designed by architect Victor Laloux and opened for the 1900 World's Fair",
+        "Its trains were electric, so there was no smoke. That's why a station could look this fancy in the middle of Paris",
+        "By 1939 the platforms were too short for modern long trains, and main-line service stopped",
+        "It was nearly torn down in the 1970s. Instead it became a museum, opening in 1986",
+        "Take your time here: just look around and enjoy it!"
+      ],
+      "did_you_notice": [
+        "The giant arched glass roof letting in daylight",
+        "The big gold clock at the end of the hall",
+        "The patterned ceiling panels between the iron arches",
+        "Statues lined up along the hall where the tracks used to be",
+        "Carpeaux's Four Parts of the World: four women holding up a globe"
+      ],
+      "mind_blown": [
+        "When it opened, a painter said the station looked like a palace of fine arts. 86 years later, it became one!",
+        "The station is said to contain more metal than the Eiffel Tower.",
+        "Before it became a museum, the empty station was used as a film set, a theater, and even a mail center during World War II."
+      ],
+      "observation_challenge": [
+        "Find the big clock and check the time",
+        "Find the four women holding up the globe. Which continents do they stand for?",
+        "Lie back on a bench and look up at the roof",
+        "Imagine the trains and crowds. Where would the platforms have been?",
+        "Pick your favorite statue in the hall"
+      ]
+    }
+  ]
+}

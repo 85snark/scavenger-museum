@@ -1,0 +1,710 @@
+{
+  "museum_name": "Musée du Louvre",
+  "guide_title": "The Fun Guide",
+  "artworks": [
+    {
+      "id": 1,
+      "title": "Mona Lisa",
+      "artist": "Leonardo da Vinci",
+      "artist_years": "1452-1519",
+      "location": "Room 711 (Salle des États) - Denon Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1280px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010062370",
+      "what_makes_cool": [
+        "The most famous painting in the world, and we're seeing it first, before the crowds arrive!",
+        "Painted in the early 1500s on a wooden panel, not a canvas",
+        "She's smaller than most people expect: about 77 x 53 cm (roughly 2.5 x 1.75 feet)",
+        "She is probably Lisa Gherardini, the wife of a silk merchant in Florence. That's why the Italians call her 'La Gioconda'",
+        "Leonardo never handed it over. He kept working on it for years and brought it with him when he moved to France",
+        "She sits behind thick bulletproof glass in a climate-controlled case"
+      ],
+      "did_you_notice": [
+        "She has no eyebrows or eyelashes!",
+        "Her smile seems to change depending on whether you look at her eyes or her mouth",
+        "The landscape behind her doesn't line up: the horizon on the left is lower than on the right",
+        "A winding road on the left and a bridge on the right",
+        "Her hands are folded calmly, right hand on top of left",
+        "Soft, smoky edges with no hard outlines. Leonardo's technique is called 'sfumato' (Italian for 'smoky')"
+      ],
+      "mind_blown": [
+        "In 1911 she was stolen by Vincenzo Peruggia, a handyman who had worked at the Louvre. She was missing for over two years until he tried to sell her in Florence.",
+        "While she was gone, crowds came to the Louvre just to stare at the empty space on the wall. The theft is a big reason she became so famous.",
+        "Napoleon once hung the Mona Lisa in his bedroom.",
+        "During World War II she was secretly moved from castle to castle around France to keep her safe."
+      ],
+      "observation_challenge": [
+        "Move from one side of the room to the other. Do her eyes seem to follow you?",
+        "Find the bridge in the background",
+        "Count how many phones you can see pointed at her",
+        "Is she bigger or smaller than you expected?",
+        "Turn around: what giant painting is hanging right behind you?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Wedding at Cana",
+      "artist": "Paolo Veronese",
+      "artist_years": "1528-1588",
+      "location": "Room 711 (Salle des États) - Denon Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_%3B_MR_384.jpg/1280px-Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_%3B_MR_384.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_;_MR_384.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010064382",
+      "what_makes_cool": [
+        "The BIGGEST painting in the Louvre: almost 7 m tall and 10 m wide (about 22 x 33 feet)!",
+        "It hangs opposite the Mona Lisa, so most visitors stand with their backs to it",
+        "Painted in 1562-63 for the dining hall of a monastery in Venice",
+        "It shows the Bible story where Jesus turns water into wine at a wedding feast",
+        "Veronese turned it into a huge, fancy Venetian party with over 100 people"
+      ],
+      "did_you_notice": [
+        "Jesus sits right in the middle, with a glowing halo",
+        "A group of musicians playing in the center foreground",
+        "Servants pouring wine out of big stone jars on the right",
+        "Dogs and other animals hiding among the guests",
+        "People are dressed in fancy 1500s Venetian clothes, not Bible-times clothes"
+      ],
+      "mind_blown": [
+        "In 1797 Napoleon's soldiers took it from Venice. They cut it into pieces to carry it to Paris and stitched it back together.",
+        "After Napoleon lost power, many stolen artworks went back. This one stayed: it was considered too big and fragile to move, and Venice got a different painting instead.",
+        "The musicians are traditionally said to be portraits of famous Venetian painters, including Titian and Veronese himself."
+      ],
+      "observation_challenge": [
+        "Count the dogs in the painting",
+        "Find the hourglass on the musicians' table",
+        "Find someone tasting or inspecting the wine",
+        "Find Jesus. Is he the only person looking straight at you?",
+        "Estimate how many people are in the painting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Leonardo in the Grande Galerie",
+      "artist": "Leonardo da Vinci",
+      "artist_years": "1452-1519",
+      "location": "Room 710 (Grande Galerie) - Denon Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg/1280px-Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Leonardo_Da_Vinci_-_Vergine_delle_Rocce_(Louvre).jpg",
+      "image_license": "Public domain",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010062373",
+      "what_makes_cool": [
+        "The Grande Galerie is one of the longest rooms in Europe. It was built to connect the Louvre to another palace, the Tuileries",
+        "It's home to some of Leonardo's other masterpieces. The Louvre owns more Leonardo paintings than anywhere else in the world",
+        "The Virgin of the Rocks (1480s) shows Mary, baby Jesus, baby John the Baptist and an angel in a rocky cave",
+        "Saint Anne shows Jesus's grandmother, Anne, with Mary sitting on her lap and baby Jesus playing with a lamb",
+        "Leonardo worked on Saint Anne for years and never quite finished it"
+      ],
+      "did_you_notice": [
+        "The strange, jagged rocks and plants in the Virgin of the Rocks",
+        "The angel pointing at baby John",
+        "In Saint Anne, Mary is sitting on her mother's lap!",
+        "Baby Jesus grabbing a lamb by the ears",
+        "The same soft, smoky style you saw in the Mona Lisa"
+      ],
+      "mind_blown": [
+        "There are TWO versions of the Virgin of the Rocks: this one and another in the National Gallery in London.",
+        "The plants in the Virgin of the Rocks are painted so accurately that botanists can identify the species.",
+        "The lamb in Saint Anne is a symbol of sacrifice: Mary seems to be pulling Jesus back from it."
+      ],
+      "observation_challenge": [
+        "Find both paintings",
+        "Find the pointing angel",
+        "Look for other Leonardo paintings in the gallery. How many can you find?",
+        "Look down the gallery. Can you see the end?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "The Salon Carré",
+      "location": "Room 708 - Denon Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Salon_Carr%C3%A9_Ceiling.jpg/1280px-Salon_Carr%C3%A9_Ceiling.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Salon_Carr%C3%A9_Ceiling.jpg",
+      "image_license": "CC BY-SA 4.0",
+      "image_credit": "Sumit Surai",
+      "source_url": "https://www.louvre.fr/en/explore/visitor-trails/the-louvre-s-masterpieces/the-making-of-reputations",
+      "what_makes_cool": [
+        "This room is a stop because of its history, not just what's on the walls",
+        "From the 1700s, the Royal Academy showed new art here. These shows were called 'the Salon', after this room",
+        "That's why art exhibitions are still called 'salons' today",
+        "After the exhibitions moved out, this room was saved for the museum's very best paintings",
+        "Today it holds early Italian paintings, with lots of gold backgrounds"
+      ],
+      "did_you_notice": [
+        "The decorated ceiling (look up!)",
+        "The glass roof letting in daylight",
+        "Paintings with shining gold backgrounds",
+        "The square shape. 'Carré' means 'square' in French"
+      ],
+      "mind_blown": [
+        "The Mona Lisa used to hang here. This is the room she was stolen from in 1911!",
+        "In 1810 Napoleon married his second wife, Marie-Louise, in this room.",
+        "Young artists would show their work here hoping to become famous. A good review could make a career."
+      ],
+      "observation_challenge": [
+        "Look up: what figures and shapes can you find on the ceiling?",
+        "Find the painting with the most gold in it",
+        "Imagine the walls covered floor to ceiling with paintings, the way the old Salon looked",
+        "Pick the painting you'd hang in your bedroom"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Botticelli's Frescoes",
+      "artist": "Sandro Botticelli",
+      "artist_years": "c. 1445-1510",
+      "location": "Room 706 - Denon Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/V%C3%A9nus_et_les_trois_Gr%C3%A2ces_offrant_des_pr%C3%A9sents_%C3%A0_une_jeune_fille_-_Sandro_Botticelli_-_Mus%C3%A9e_du_Louvre_Peintures_RF_321.jpg/1280px-V%C3%A9nus_et_les_trois_Gr%C3%A2ces_offrant_des_pr%C3%A9sents_%C3%A0_une_jeune_fille_-_Sandro_Botticelli_-_Mus%C3%A9e_du_Louvre_Peintures_RF_321.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:V%C3%A9nus_et_les_trois_Gr%C3%A2ces_offrant_des_pr%C3%A9sents_%C3%A0_une_jeune_fille_-_Sandro_Botticelli_-_Mus%C3%A9e_du_Louvre_Peintures_RF_321.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010064994",
+      "what_makes_cool": [
+        "These are frescoes: paintings made on wet plaster, right on a wall",
+        "Botticelli also painted the famous Birth of Venus (which is in Florence)",
+        "Painted in the 1480s for a villa near Florence, probably to celebrate a wedding",
+        "One shows Venus and the Three Graces bringing gifts to a young woman",
+        "The other shows a young man being introduced to the Liberal Arts, the subjects people studied back then"
+      ],
+      "did_you_notice": [
+        "Cracks and missing patches. These were cut out of a real wall!",
+        "The Three Graces in flowing dresses",
+        "A row of women in the other fresco, each one representing a subject",
+        "Soft, faded colors, very different from oil paintings"
+      ],
+      "mind_blown": [
+        "The frescoes were hidden under a layer of whitewash for centuries and only discovered in 1873.",
+        "The Louvre bought them, and they were carefully peeled off the villa's wall and brought to Paris.",
+        "The women in the second fresco represent subjects like Grammar, Arithmetic, Music and Astronomy."
+      ],
+      "observation_challenge": [
+        "Count the women in the Liberal Arts fresco",
+        "Find the young woman receiving gifts",
+        "Find the biggest missing patch",
+        "If you could pick one subject to study from the fresco, which would it be?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "The Galerie d'Apollon",
+      "location": "Room 705 - Denon Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Galerie_d%27Apollon_%28Louvre%29.jpg/1280px-Galerie_d%27Apollon_%28Louvre%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Galerie_d%27Apollon_(Louvre).jpg",
+      "image_license": "CC0",
+      "source_url": "https://www.louvre.fr/en/explore/the-palace/sun-and-gold",
+      "what_makes_cool": [
+        "A gallery covered in gold, built for King Louis XIV after a fire in 1661",
+        "Its theme is Apollo, the Greek sun god, because Louis XIV called himself the 'Sun King'",
+        "It was the model for the famous Hall of Mirrors at the Palace of Versailles",
+        "The painting in the middle of the ceiling is by Delacroix, who painted Liberty Leading the People (coming up soon!)",
+        "For over 100 years the French crown jewels were displayed here"
+      ],
+      "did_you_notice": [
+        "Gold decoration on every surface",
+        "Suns and sun-rays all over the decoration",
+        "The ceiling painting of Apollo fighting a giant serpent",
+        "The tall windows on the River Seine side of the gallery"
+      ],
+      "mind_blown": [
+        "This is the scene of a real heist! On October 19, 2025, just after opening time, thieves parked a truck with a lift beside the Seine, rode it up to a balcony, and cut through one of these windows.",
+        "In just a few minutes they smashed two display cases and grabbed eight royal jewels. Then they went back out the window, down the lift, and escaped on motorbikes. One crown was found outside the museum, damaged.",
+        "The gallery reopened in July 2026, but without any jewels. The surviving jewels are being moved to a new high-security room.",
+        "Delacroix painted his ceiling almost 200 years after the gallery was built, to finish a spot that had been left empty."
+      ],
+      "observation_challenge": [
+        "Find Apollo in the center of the ceiling",
+        "Count the suns you can spot",
+        "Find the windows facing the River Seine. Which one do you think the thieves came through?",
+        "Look out a window: where could a truck have parked down below?"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Winged Victory of Samothrace",
+      "artist": "Unknown Greek sculptor",
+      "location": "Room 703 (top of the Daru Staircase) - Denon Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Victoire_de_Samothrace_-_Musee_du_Louvre_-_20190812.jpg/1280px-Victoire_de_Samothrace_-_Musee_du_Louvre_-_20190812.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Victoire_de_Samothrace_-_Musee_du_Louvre_-_20190812.jpg",
+      "image_license": "CC0",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010252531",
+      "what_makes_cool": [
+        "This is Nike, the Greek goddess of victory. Yes, the sportswear brand is named after her!",
+        "Carved over 2,000 years ago (around 190 BC)",
+        "She's landing on the front of a warship, probably to celebrate a victory at sea",
+        "She stands at the top of the grand Daru staircase, so visitors climbing up see her towering above them",
+        "Together with her ship, she's over 5.5 m tall"
+      ],
+      "did_you_notice": [
+        "Her dress looks wet and wind-blown, as if she's flying into the sea breeze",
+        "The base is shaped like the front of a ship",
+        "Her huge wings spread out behind her",
+        "She has no head and no arms"
+      ],
+      "mind_blown": [
+        "She was found in 1863 on the Greek island of Samothrace in more than 100 pieces.",
+        "Her head and arms have never been found. One of her hands turned up in 1950 and is displayed nearby.",
+        "Her ship base was found and brought to Paris years after the statue."
+      ],
+      "observation_challenge": [
+        "Find her hand in a glass case nearby",
+        "Walk around her. Is one side more carefully carved than the other? Which side was meant to be seen?",
+        "Go a few steps down the staircase and look back up at her",
+        "Where do you think the wind is blowing from?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "The Coronation of Napoleon",
+      "artist": "Jacques-Louis David",
+      "artist_years": "1748-1825",
+      "location": "Room 702 (Salle Daru) - Denon Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_%3B_MR_1437.jpg/1280px-Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_%3B_MR_1437.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_;_MR_1437.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+      "what_makes_cool": [
+        "Another giant: over 6 m tall and almost 10 m wide (about 20 x 32 feet)",
+        "It shows a real event: December 2, 1804, at Notre-Dame Cathedral in Paris",
+        "Napoleon had already crowned himself emperor. Here he's crowning his wife Joséphine as empress",
+        "David was Napoleon's official painter and was there to watch the ceremony",
+        "It took him about three years to paint"
+      ],
+      "did_you_notice": [
+        "Napoleon holding the crown above Joséphine's head",
+        "Napoleon wearing a golden laurel wreath, like a Roman emperor",
+        "The Pope sitting behind Napoleon with his hand raised in blessing",
+        "Joséphine kneeling, with ladies holding her long velvet train",
+        "Gold, velvet and jewels everywhere!"
+      ],
+      "mind_blown": [
+        "Napoleon's mother sits in the place of honor in the center box, but she didn't actually go to the ceremony! Napoleon had David paint her in anyway.",
+        "David's early sketches showed Napoleon crowning himself. He changed it to the gentler moment of Napoleon crowning Joséphine.",
+        "David painted himself into the picture: he's up in the gallery, sketching the scene.",
+        "David painted a second version years later, now at the Palace of Versailles."
+      ],
+      "observation_challenge": [
+        "Find Napoleon's mother in the center box",
+        "Find David drawing in the gallery",
+        "Find the Pope's raised hand",
+        "If you were in this crowd, where would you want to stand?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "The Raft of the Medusa",
+      "artist": "Théodore Géricault",
+      "artist_years": "1791-1824",
+      "location": "Room 700 (Salle Mollien) - Denon Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/1280px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_(Museo_del_Louvre,_1818-19).jpg",
+      "image_license": "Public domain",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010059199",
+      "what_makes_cool": [
+        "Based on a real shipwreck: in 1816 the French ship Méduse ran aground off the coast of West Africa",
+        "About 150 people were put on a homemade raft. After 13 days at sea, only 15 survived",
+        "The captain had gotten the job through political connections, not skill. The painting was a huge scandal",
+        "Géricault was only 27 when he painted it",
+        "It's about 5 m tall and over 7 m wide"
+      ],
+      "did_you_notice": [
+        "A tiny ship on the horizon. That's the rescue ship, the Argus!",
+        "A man at the top waving a cloth to get the ship's attention",
+        "An old man on the left holding a young man who has died",
+        "The torn sail and huge waves",
+        "The bodies are arranged in a pyramid shape that builds up toward the waving man"
+      ],
+      "mind_blown": [
+        "Géricault interviewed survivors and even had a model of the raft built in his studio.",
+        "He shaved his head so he would be too embarrassed to go out, and stayed in his studio to work.",
+        "His friend Eugène Delacroix posed for one of the figures. You'll see Delacroix's own painting right next to this one.",
+        "Parts of the painting have darkened over time because of a tar-like paint called bitumen."
+      ],
+      "observation_challenge": [
+        "Find the rescue ship (it's REALLY small)",
+        "Count how many people are waving or reaching toward the ship",
+        "Find the figure lying face-down in the front with an arm stretched out",
+        "How does the painting make you feel: hopeful or hopeless?"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Liberty Leading the People",
+      "artist": "Eugène Delacroix",
+      "artist_years": "1798-1863",
+      "location": "Room 700 (Salle Mollien) - Denon Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/1280px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010065872",
+      "what_makes_cool": [
+        "Painted in 1830 about a real revolution in Paris: three days of street fighting in July 1830 that pushed out King Charles X",
+        "The woman isn't a real person. She's 'Liberty', an idea turned into a person",
+        "She carries the French flag (blue, white, red) and a musket",
+        "It became a symbol of France and was printed on the old French 100-franc bank note",
+        "It was cleaned and restored in 2024, so the colors are brighter than they've been in a long time"
+      ],
+      "did_you_notice": [
+        "Liberty is barefoot",
+        "She wears a red cap, a symbol of freedom since the French Revolution",
+        "A boy next to her waving two pistols",
+        "A man in a top hat holding a gun",
+        "The towers of Notre-Dame Cathedral in the smoky background on the right"
+      ],
+      "mind_blown": [
+        "The French government bought the painting, then hid it away for years because they thought it might encourage more revolutions.",
+        "The boy with the pistols may have inspired the character Gavroche in Victor Hugo's novel Les Misérables.",
+        "Some people think the man in the top hat is Delacroix himself, but nobody knows for sure."
+      ],
+      "observation_challenge": [
+        "Find the towers of Notre-Dame",
+        "Find the three colors of the French flag somewhere else in the painting (look at the clothes!)",
+        "Count the weapons you can see",
+        "Compare this to the Raft of the Medusa next to it. What's similar? What's different?"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Michelangelo's Slaves & Canova's Psyche",
+      "artist": "Michelangelo and Antonio Canova",
+      "location": "Room 403 - Denon Wing, Level 0",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Dying_slave_Louvre_MR_1590%2C_Louvre.jpg/1280px-Dying_slave_Louvre_MR_1590%2C_Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Dying_slave_Louvre_MR_1590,_Louvre.jpg",
+      "image_license": "CC0",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010091872",
+      "what_makes_cool": [
+        "Two of the most famous sculptors ever, in one room",
+        "Michelangelo (1475-1564) carved the Dying Slave and the Rebellious Slave for the tomb of Pope Julius II",
+        "The tomb plans changed and they were never used. Michelangelo gave them away, and they ended up with the King of France",
+        "Canova (1757-1822) carved Psyche Revived by Cupid's Kiss about 270 years later",
+        "In the myth, Psyche falls into a deep sleep and Cupid wakes her with a kiss"
+      ],
+      "did_you_notice": [
+        "The Slaves are unfinished. Look for chisel marks!",
+        "The Dying Slave looks like he's falling asleep, while the Rebellious Slave is twisting to break free",
+        "Cupid's wings and the way the two figures make an X shape",
+        "How smooth and soft Canova's marble looks, almost like skin"
+      ],
+      "mind_blown": [
+        "Behind the Dying Slave is a rough shape of a monkey, still half stuck in the stone.",
+        "Michelangelo said he imagined the figure was already inside the marble and he just had to free it.",
+        "Canova's statue was originally fitted with a handle so it could be turned and seen from every angle."
+      ],
+      "observation_challenge": [
+        "Find the monkey shape behind the Dying Slave",
+        "Find a spot where you can see chisel marks",
+        "Walk all the way around Psyche and Cupid. Which view do you like best?",
+        "Which looks more 'alive' to you: Michelangelo's or Canova's?"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "The Louvre Pyramid",
+      "artist": "I. M. Pei",
+      "artist_years": "1917-2019",
+      "location": "View from the window by Room 404 - Denon Wing, Level 0",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Inside_the_Louvre_Pyramid_July_2025.jpg/1280px-Inside_the_Louvre_Pyramid_July_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Inside_the_Louvre_Pyramid_July_2025.jpg",
+      "image_license": "CC0",
+      "source_url": "https://www.louvre.fr/en/explore/visitor-trails/the-louvre-s-masterpieces/a-transparent-controversy",
+      "what_makes_cool": [
+        "The glass pyramid you walked under to get in is a modern work of architecture",
+        "Designed by architect I. M. Pei and opened in 1989",
+        "It's about 21 m (70 feet) tall",
+        "It made the entrance big enough for millions of visitors and lets daylight into the hall underground",
+        "It's one of the most photographed buildings in the world"
+      ],
+      "did_you_notice": [
+        "It's made of diamond and triangle shaped glass panes",
+        "You can see the old palace right through the glass",
+        "The glass is extra clear, so it doesn't look green like normal window glass",
+        "Fountains and pools around it"
+      ],
+      "mind_blown": [
+        "When it was first proposed, lots of people in Paris HATED the idea of a modern glass pyramid at an old royal palace.",
+        "A famous rumor says it has exactly 666 panes. It actually has 673.",
+        "There's an upside-down pyramid too, in the shopping area under the Carrousel."
+      ],
+      "observation_challenge": [
+        "Count the glass diamonds along one edge",
+        "Find the smaller pyramids nearby",
+        "What shapes do you see in the reflection?",
+        "Old palace + modern pyramid: do they go together? Why or why not?"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Venus de Milo",
+      "artist": "Unknown Greek sculptor",
+      "location": "Room 345 - Sully Wing, Level 0",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_%3B_N_527_%3B_Ma_399.jpg/1280px-V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_%3B_N_527_%3B_Ma_399.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_;_N_527_;_Ma_399.jpg",
+      "image_license": "CC0",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010277627",
+      "what_makes_cool": [
+        "One of the most famous statues in the world",
+        "Carved in Greece around 150-125 BC",
+        "She's probably Aphrodite, the Greek goddess of love. Venus is her Roman name",
+        "Found in 1820 by a farmer on the Greek island of Milos (that's the 'de Milo' part)",
+        "She's just over 2 m tall, taller than most adults"
+      ],
+      "did_you_notice": [
+        "No arms!",
+        "Her body twists, with her weight on one leg",
+        "Her clothes are slipping down around her hips",
+        "Small holes where metal jewelry was probably once attached"
+      ],
+      "mind_blown": [
+        "Nobody knows what her arms were doing. People have guessed she held an apple, a mirror or a shield.",
+        "She's carved from two separate blocks of marble joined at the hips.",
+        "During World War II she was hidden in a castle in the French countryside to keep her safe."
+      ],
+      "observation_challenge": [
+        "Guess what her arms were doing, then try the pose yourself",
+        "Find where the two blocks of marble meet",
+        "Walk all the way around her. Does she look different from the back?",
+        "Find a jewelry hole"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Salle des Caryatides & Diana of Versailles",
+      "location": "Room 348 - Sully Wing, Level 0",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Salle_des_Cariatides_in_Paris-Louvre.jpg/1280px-Salle_des_Cariatides_in_Paris-Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Salle_des_Cariatides_in_Paris-Louvre.jpg",
+      "image_license": "CC0",
+      "source_url": "https://www.louvre.fr/en/explore/visitor-trails/the-louvre-s-masterpieces/ancient-masterpieces-from-the-royal-collections",
+      "what_makes_cool": [
+        "One of the oldest rooms in the Louvre palace, from the 1550s",
+        "The four giant women holding up the balcony are caryatids (columns shaped like people), carved by Jean Goujon",
+        "The balcony was for musicians playing at royal parties",
+        "The room is full of ancient Greek and Roman statues that belonged to the kings of France",
+        "Diana the Huntress was a gift from the Pope to King Henry II in 1556"
+      ],
+      "did_you_notice": [
+        "The musicians' gallery above the door (look behind you as you come in)",
+        "Diana reaching over her shoulder for an arrow",
+        "A deer leaping beside Diana",
+        "A sleeping figure lying on a marble mattress"
+      ],
+      "mind_blown": [
+        "The playwright Molière performed for the young King Louis XIV in this room in 1658.",
+        "The marble mattress under the sleeping figure was carved by the famous sculptor Bernini in 1619. It looks soft enough to sleep on!",
+        "Diana is a Roman copy of a lost Greek bronze statue."
+      ],
+      "observation_challenge": [
+        "Count the caryatids",
+        "Find the deer",
+        "Find the marble mattress and see if it really looks soft",
+        "Find your favorite animal in the room's statues"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "The Seated Scribe",
+      "optional": true,
+      "artist": "Unknown Egyptian sculptor",
+      "location": "Room 635 - Sully Wing, Level 1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg/1280px-Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg",
+      "image_license": "CC0",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010006582",
+      "what_makes_cool": [
+        "Over 4,500 years old, made in ancient Egypt during the time the pyramids were built",
+        "A scribe was someone who could read and write, an important job when most people couldn't",
+        "He's made of painted limestone, and lots of the original paint survives",
+        "Found in 1850 at Saqqara, an ancient Egyptian burial ground",
+        "He's small: only about 54 cm (21 inches) tall"
+      ],
+      "did_you_notice": [
+        "His eyes look incredibly real",
+        "He's sitting cross-legged with a scroll of papyrus on his lap",
+        "His hand is curled to hold a writing brush that's now missing",
+        "A bit of a belly, a sign he was well-fed and important"
+      ],
+      "mind_blown": [
+        "His eyes are made of rock crystal and other stones, set in copper, so they catch the light like real eyes.",
+        "Nobody knows who he was. His name has been lost.",
+        "He has been watching people for about 4,500 years."
+      ],
+      "observation_challenge": [
+        "Move side to side. Do his eyes follow you?",
+        "Find his missing pen (where would it go?)",
+        "Sit the way he's sitting. How long could you stay like that?",
+        "What do you think he's about to write?"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Great Sphinx of Tanis",
+      "artist": "Unknown Egyptian sculptor",
+      "location": "Room 338 (Crypt of the Sphinx) - Sully Wing, Level -1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Grand_sphinx_de_Tanis_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_N_23_%3B_A_23_%3B_Salt_3837.jpg/1280px-Grand_sphinx_de_Tanis_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_N_23_%3B_A_23_%3B_Salt_3837.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Grand_sphinx_de_Tanis_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_N_23_;_A_23_;_Salt_3837.jpg",
+      "image_license": "CC0",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010010062",
+      "what_makes_cool": [
+        "One of the biggest sphinxes outside of Egypt: almost 5 m long",
+        "Carved from a single block of pink granite",
+        "A sphinx has the body of a lion and the head of a pharaoh, showing strength and royal power",
+        "It may be over 4,000 years old",
+        "It was found at Tanis, an ancient city in Egypt, and came to the Louvre in 1826"
+      ],
+      "did_you_notice": [
+        "The lion's paws and body",
+        "The royal headdress (called a nemes) with stripes",
+        "Hieroglyphs carved on the base and chest",
+        "Oval frames around some of the hieroglyphs"
+      ],
+      "mind_blown": [
+        "Several pharaohs, living hundreds of years apart, carved their own names on it to claim it as theirs!",
+        "The ovals are called cartouches. Each one holds a pharaoh's name.",
+        "Because of all the name changes, experts still argue about exactly when it was first made."
+      ],
+      "observation_challenge": [
+        "Count the cartouches (oval name frames) you can find",
+        "Find the lion's tail",
+        "Look at its face. Does it look friendly or fierce?",
+        "Strike a sphinx pose!"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "The Medieval Louvre",
+      "location": "Medieval Louvre - Sully Wing, Level -1",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Corner_of_the_ditches_of_the_medieval_Louvre_2.jpg/1280px-Corner_of_the_ditches_of_the_medieval_Louvre_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Corner_of_the_ditches_of_the_medieval_Louvre_2.jpg",
+      "image_license": "Public domain",
+      "source_url": "https://en.wikipedia.org/wiki/Louvre_Castle",
+      "what_makes_cool": [
+        "Before it was a palace or a museum, the Louvre was a CASTLE",
+        "King Philippe Auguste built it around 1190-1202 to protect Paris",
+        "You're walking at the bottom of the castle's real moat",
+        "These are the actual walls of the castle and the base of its great round tower (the keep)",
+        "The castle was knocked down in the 1500s to make room for a palace, and buried"
+      ],
+      "did_you_notice": [
+        "Huge, rough stone blocks",
+        "The curved base of the round tower",
+        "A support pillar for the old drawbridge",
+        "Symbols carved into some of the stones"
+      ],
+      "mind_blown": [
+        "These walls were forgotten for centuries and only dug up in the 1980s, when the Pyramid was being built.",
+        "The carved symbols are stonemasons' marks: each worker had his own sign so he could get paid for the stones he cut.",
+        "Archaeologists found pieces of a golden royal helmet in an old well here. It belonged to King Charles VI."
+      ],
+      "observation_challenge": [
+        "Find a stonemason's mark. Some look like hearts!",
+        "Find the drawbridge support",
+        "Stand in the moat and look up. How hard would it be to attack this castle?",
+        "Find the royal helmet on display"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "The Lamassu (Winged Bulls)",
+      "optional": true,
+      "artist": "Assyrian sculptors",
+      "location": "Room 229 (Cour Khorsabad) - Richelieu Wing, Level 0",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Lamassu_sous_la_forme_d%27un_taureau_androc%C3%A9phale_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_orientales_AO_19857.jpg/1280px-Lamassu_sous_la_forme_d%27un_taureau_androc%C3%A9phale_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_orientales_AO_19857.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Lamassu_sous_la_forme_d%27un_taureau_androc%C3%A9phale_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_orientales_AO_19857.jpg",
+      "image_license": "CC0",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010122557",
+      "what_makes_cool": [
+        "Giant guardians with the body of a bull, the wings of an eagle and the head of a man",
+        "Made around 2,700 years ago for the palace of the Assyrian King Sargon II, in what is now Iraq",
+        "They stood at the palace gates to protect the king and scare away evil",
+        "Each one is over 4 m tall and carved from a single block of stone",
+        "French explorers dug up this palace in the 1840s, the first big dig of ancient Assyria"
+      ],
+      "did_you_notice": [
+        "The curly beard and hair",
+        "A tall hat with horns, a sign of a god",
+        "Big feathered wings along the sides",
+        "Writing carved between the legs"
+      ],
+      "mind_blown": [
+        "They have FIVE legs! From the front they look like they're standing still, and from the side they look like they're walking.",
+        "The writing is cuneiform, one of the oldest writing systems in the world, made with wedge shapes.",
+        "Moving them was a massive job. They weigh many tons."
+      ],
+      "observation_challenge": [
+        "Count the legs: first from the front, then from the side",
+        "Find the horns on the hat",
+        "Find the cuneiform writing",
+        "Which would scare you more if you were an enemy: the face or the size?"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "The Code of Hammurabi",
+      "optional": true,
+      "location": "Room 227 - Richelieu Wing, Level 0",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Code_of_Hammurabi-Sb_8-IMG_7753-gradient.jpg/1280px-Code_of_Hammurabi-Sb_8-IMG_7753-gradient.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Code_of_Hammurabi-Sb_8-IMG_7753-gradient.jpg",
+      "image_license": "CC BY-SA 3.0 fr",
+      "image_credit": "Rama",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010174436",
+      "what_makes_cool": [
+        "One of the oldest written sets of laws in the world, about 3,750 years old",
+        "Made for Hammurabi, King of Babylon (in what is now Iraq)",
+        "It lists 282 laws about trade, family, property and crime",
+        "It's where the famous idea 'an eye for an eye' comes from",
+        "It's carved in black stone and is over 2 m tall"
+      ],
+      "did_you_notice": [
+        "The picture at the top: King Hammurabi standing in front of the sun god Shamash",
+        "Flames or rays coming from Shamash's shoulders",
+        "Tiny wedge-shaped writing covering the stone",
+        "A smooth, blank patch near the bottom"
+      ],
+      "mind_blown": [
+        "It wasn't found in Babylon! An enemy king carried it off as war loot to Susa, in what is now Iran, where French archaeologists found it in 1901.",
+        "That enemy king had some of the laws scraped off, probably to add his own message, which was never carved. That's the blank patch.",
+        "Shamash was the god of justice, so the picture shows the laws as coming from the gods."
+      ],
+      "observation_challenge": [
+        "Find the blank patch where laws were scraped away",
+        "Find Shamash's flames",
+        "Find what Shamash is handing to the king (a rod and a ring)",
+        "If you could add one law, what would it be?"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "The Lacemaker",
+      "optional": true,
+      "artist": "Johannes Vermeer",
+      "artist_years": "1632-1675",
+      "location": "Room 837 - Richelieu Wing, Level 2",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Johannes_Vermeer_-_The_lacemaker_%28c.1669-1671%29.jpg/1280px-Johannes_Vermeer_-_The_lacemaker_%28c.1669-1671%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_The_lacemaker_(c.1669-1671).jpg",
+      "image_license": "Public domain",
+      "source_url": "https://collections.louvre.fr/en/ark:/53355/cl010064918",
+      "what_makes_cool": [
+        "A tiny painting, only about 24 x 21 cm, smaller than a sheet of paper!",
+        "Painted around 1669-1670 in the Netherlands",
+        "Only about 35 paintings by Vermeer exist, so each one is a treasure",
+        "It shows a young woman concentrating hard on making lace",
+        "Vermeer was a master of quiet everyday scenes and soft light"
+      ],
+      "did_you_notice": [
+        "Red and white threads spilling out of the sewing cushion, painted almost like drips of paint",
+        "The thin threads she's working on are sharp, while things closer to us are blurry",
+        "Bobbins and pins in her hands",
+        "A small book on the table"
+      ],
+      "mind_blown": [
+        "The blurry foreground is like a camera that's out of focus. Some experts think Vermeer used lenses to study light.",
+        "Salvador Dalí was obsessed with this painting and came to the Louvre to copy it.",
+        "After all the giant paintings today, this is one of the smallest famous paintings in the museum."
+      ],
+      "observation_challenge": [
+        "Measure it with your hands. How many hand-widths wide is it?",
+        "Find the red thread",
+        "Find something blurry and something sharp",
+        "What do you think she's thinking about?"
+      ]
+    }
+  ]
+}

@@ -20,6 +20,8 @@ Contains artwork details in JSON format. Each dataset includes:
 **Included datasets:**
 - `prado_artworks.json` - Museo del Prado (Madrid, Spain)
 - `sofia_reina_artworks.json` - Museo Reina Sofía (Madrid, Spain)
+- `louvre_artworks.json` - Musée du Louvre (Paris, France)
+- `orsay_artworks.json` - Musée d'Orsay (Paris, France)
 
 ### 2. `template.html` - Jinja2 Template
 A reusable HTML template that creates:
@@ -109,6 +111,12 @@ Edit any JSON file in `data/` and add new entries following this structure:
 }
 ```
 
+Optional fields:
+- `artist` / `artist_years` - omit for places, rooms, or anonymous works (the "by ..." line is hidden)
+- `optional: true` - shows an "Optional stop" badge
+- `image_credit` / `image_license` - shown under the image (needed for CC BY / BY-SA photos)
+- `image_page` - the image's Commons page, for reference
+
 ### Option 2: Create a New Museum Dataset
 
 1. Create a new JSON file in `data/` (e.g., `data/met_artworks.json`)
@@ -147,10 +155,14 @@ Edit `template.html` to customize:
 scavenger-museum/
 ├── data/                          # Input JSON datasets
 │   ├── prado_artworks.json
-│   └── sofia_reina_artworks.json
+│   ├── sofia_reina_artworks.json
+│   ├── louvre_artworks.json
+│   └── orsay_artworks.json
 ├── output/                        # Generated HTML guides
 │   ├── prado_artworks.html
-│   └── sofia_reina_artworks.html
+│   ├── sofia_reina_artworks.html
+│   ├── louvre_artworks.html
+│   └── orsay_artworks.html
 ├── template.html                  # HTML template
 ├── generate_guide.py              # Generator script
 └── requirements.txt               # Python dependencies
