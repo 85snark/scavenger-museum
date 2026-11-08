@@ -96,6 +96,27 @@
             color-adjust: exact;
         }
 
+        .image-credit {
+            font-size: 0.6rem;
+            color: #888;
+            margin-top: 0.2rem;
+            max-width: 300px;
+        }
+
+        .optional-badge {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1d4ed8;
+            border: 1.5px dashed #3b82f6;
+            border-radius: 4px;
+            padding: 0.1rem 0.45rem;
+            margin-bottom: 0.3rem;
+        }
+
         .artist-info {
             font-size: 1.08rem;
             color: #666;
@@ -230,6 +251,72 @@
             background-color: white;
         }
 
+        /* Phone Styles (screen only; print layout is unchanged) */
+        @media screen and (max-width: 640px) {
+            body {
+                font-size: 15px;
+            }
+
+            .cover-page h1 {
+                font-size: 2.5rem;
+                padding: 0 1rem;
+            }
+
+            .cover-page h2 {
+                font-size: 1.4rem;
+            }
+
+            .artwork-page {
+                padding: 1rem;
+                min-height: 0;
+                border-bottom: 6px solid #f3f4f6;
+            }
+
+            .top-section {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .artwork-image {
+                max-height: 260px;
+                max-width: 100%;
+            }
+
+            .image-credit {
+                max-width: none;
+            }
+
+            .artwork-title {
+                font-size: 1.9rem;
+            }
+
+            .artist-info,
+            .location-box {
+                font-size: 1rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                font-size: 1rem;
+            }
+
+            .section-emoji {
+                font-size: 1.1rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .section li,
+            .checkbox-item {
+                font-size: 0.95rem;
+            }
+        }
+
         /* Print Styles */
         @media print {
             body {
@@ -275,35 +362,14 @@
         <div class="top-section">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/The_Garden_of_earthly_delights.jpg/1200px-The_Garden_of_earthly_delights.jpg" alt="The Garden of Earthly Delights" class="artwork-image">
+                
             </div>
             <div class="artwork-header">
-                <h1 class="artwork-title">
-                    <span class="number">1.</span>
-                    
-                    
-                    
-                        
-                            <span class="title-main">The</span>
-                        
-                    
-                        
-                            <span class="title-main">Garden</span>
-                        
-                    
-                        
-                            <span class="title-main">of</span>
-                        
-                    
-                        
-                            <span class="title-highlight">Earthly</span>
-                        
-                    
-                        
-                            <span class="title-main">Delights</span>
-                        
-                    
-                </h1>
+                
+                <h1 class="artwork-title">1. The Garden of Earthly Delights</h1>
+                
                 <p class="artist-info">by Hieronymus Bosch (1450-1516)</p>
+                
                 <div class="location-box">
                     <strong>Location:</strong> Room 56A - Ground Floor
                 </div>
@@ -440,31 +506,14 @@
         <div class="top-section">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/The_Triumph_of_Death_by_Pieter_Bruegel_the_Elder.jpg" alt="The Triumph of Death" class="artwork-image">
+                
             </div>
             <div class="artwork-header">
-                <h1 class="artwork-title">
-                    <span class="number">2.</span>
-                    
-                    
-                    
-                        
-                            <span class="title-main">The</span>
-                        
-                    
-                        
-                            <span class="title-main">Triumph</span>
-                        
-                    
-                        
-                            <span class="title-main">of</span>
-                        
-                    
-                        
-                            <span class="title-highlight">Death</span>
-                        
-                    
-                </h1>
+                
+                <h1 class="artwork-title">2. The Triumph of Death</h1>
+                
                 <p class="artist-info">by Pieter Bruegel the Elder (1525-1569)</p>
+                
                 <div class="location-box">
                     <strong>Location:</strong> Room 55A - Ground Floor
                 </div>
@@ -601,35 +650,14 @@
         <div class="top-section">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/El_Descendimiento%2C_by_Rogier_van_der_Weyden%2C_from_Prado_in_Google_Earth.jpg/330px-El_Descendimiento%2C_by_Rogier_van_der_Weyden%2C_from_Prado_in_Google_Earth.jpg" alt="The Descent from the Cross" class="artwork-image">
+                
             </div>
             <div class="artwork-header">
-                <h1 class="artwork-title">
-                    <span class="number">3.</span>
-                    
-                    
-                    
-                        
-                            <span class="title-main">The</span>
-                        
-                    
-                        
-                            <span class="title-main">Descent</span>
-                        
-                    
-                        
-                            <span class="title-main">from</span>
-                        
-                    
-                        
-                            <span class="title-main">the</span>
-                        
-                    
-                        
-                            <span class="title-highlight">Cross</span>
-                        
-                    
-                </h1>
+                
+                <h1 class="artwork-title">3. The Descent from the Cross</h1>
+                
                 <p class="artist-info">by Rogier van der Weyden (1399-1464)</p>
+                
                 <div class="location-box">
                     <strong>Location:</strong> Room 58 - Ground Floor
                 </div>
@@ -776,39 +804,14 @@
         <div class="top-section">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/David_vencedor_de_Goliat%2C_de_Palma_el_Joven_%28Museo_del_Prado%29.jpg" alt="David with the Head of Goliath" class="artwork-image">
+                
             </div>
             <div class="artwork-header">
-                <h1 class="artwork-title">
-                    <span class="number">4.</span>
-                    
-                    
-                    
-                        
-                            <span class="title-main">David</span>
-                        
-                    
-                        
-                            <span class="title-main">with</span>
-                        
-                    
-                        
-                            <span class="title-main">the</span>
-                        
-                    
-                        
-                            <span class="title-main">Head</span>
-                        
-                    
-                        
-                            <span class="title-main">of</span>
-                        
-                    
-                        
-                            <span class="title-highlight">Goliath</span>
-                        
-                    
-                </h1>
+                
+                <h1 class="artwork-title">4. David with the Head of Goliath</h1>
+                
                 <p class="artist-info">by Caravaggio (1571-1610)</p>
+                
                 <div class="location-box">
                     <strong>Location:</strong> Room 7 - Ground Floor
                 </div>
@@ -955,47 +958,14 @@
         <div class="top-section">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/The_Nobleman_with_his_hand_on_his_chest%2C_by_El_Greco_%28Museo_del_Prado%2C_Madrid%29.jpg" alt="The Nobleman with his Hand on his Chest" class="artwork-image">
+                
             </div>
             <div class="artwork-header">
-                <h1 class="artwork-title">
-                    <span class="number">5.</span>
-                    
-                    
-                    
-                        
-                            <span class="title-main">The</span>
-                        
-                    
-                        
-                            <span class="title-main">Nobleman</span>
-                        
-                    
-                        
-                            <span class="title-main">with</span>
-                        
-                    
-                        
-                            <span class="title-highlight">his</span>
-                        
-                    
-                        
-                            <span class="title-main">Hand</span>
-                        
-                    
-                        
-                            <span class="title-main">on</span>
-                        
-                    
-                        
-                            <span class="title-highlight">his</span>
-                        
-                    
-                        
-                            <span class="title-main">Chest</span>
-                        
-                    
-                </h1>
+                
+                <h1 class="artwork-title">5. The Nobleman with his Hand on his Chest</h1>
+                
                 <p class="artist-info">by El Greco (1541-1614)</p>
+                
                 <div class="location-box">
                     <strong>Location:</strong> Room 9B - Ground Floor
                 </div>
@@ -1142,31 +1112,14 @@
         <div class="top-section">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg/1200px-Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg" alt="Las Meninas (The Ladies-in-Waiting)" class="artwork-image">
+                
             </div>
             <div class="artwork-header">
-                <h1 class="artwork-title">
-                    <span class="number">6.</span>
-                    
-                    
-                    
-                        
-                            <span class="title-main">Las</span>
-                        
-                    
-                        
-                            <span class="title-main">Meninas</span>
-                        
-                    
-                        
-                            <span class="title-main">(The</span>
-                        
-                    
-                        
-                            <span class="title-main">Ladies-in-Waiting)</span>
-                        
-                    
-                </h1>
+                
+                <h1 class="artwork-title">6. Las Meninas (The Ladies-in-Waiting)</h1>
+                
                 <p class="artist-info">by Diego Velázquez (1599-1660)</p>
+                
                 <div class="location-box">
                     <strong>Location:</strong> Room 12 - Ground Floor
                 </div>
@@ -1313,31 +1266,14 @@
         <div class="top-section">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Carlos_V_en_M%C3%BChlberg%2C_by_Titian%2C_from_Prado_in_Google_Earth.jpg/960px-Carlos_V_en_M%C3%BChlberg%2C_by_Titian%2C_from_Prado_in_Google_Earth.jpg" alt="Charles V at Mühlberg" class="artwork-image">
+                
             </div>
             <div class="artwork-header">
-                <h1 class="artwork-title">
-                    <span class="number">7.</span>
-                    
-                    
-                    
-                        
-                            <span class="title-main">Charles</span>
-                        
-                    
-                        
-                            <span class="title-main">V</span>
-                        
-                    
-                        
-                            <span class="title-main">at</span>
-                        
-                    
-                        
-                            <span class="title-highlight">Mühlberg</span>
-                        
-                    
-                </h1>
+                
+                <h1 class="artwork-title">7. Charles V at Mühlberg</h1>
+                
                 <p class="artist-info">by Titian (1488-1576)</p>
+                
                 <div class="location-box">
                     <strong>Location:</strong> Room 27 - First Floor
                 </div>
@@ -1484,27 +1420,14 @@
         <div class="top-section">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/The_Three_Graces%2C_by_Peter_Paul_Rubens%2C_from_Prado_in_Google_Earth.jpg/960px-The_Three_Graces%2C_by_Peter_Paul_Rubens%2C_from_Prado_in_Google_Earth.jpg" alt="The Three Graces" class="artwork-image">
+                
             </div>
             <div class="artwork-header">
-                <h1 class="artwork-title">
-                    <span class="number">8.</span>
-                    
-                    
-                    
-                        
-                            <span class="title-main">The</span>
-                        
-                    
-                        
-                            <span class="title-main">Three</span>
-                        
-                    
-                        
-                            <span class="title-highlight">Graces</span>
-                        
-                    
-                </h1>
+                
+                <h1 class="artwork-title">8. The Three Graces</h1>
+                
                 <p class="artist-info">by Peter Paul Rubens (1577-1640)</p>
+                
                 <div class="location-box">
                     <strong>Location:</strong> Room 29 - First Floor
                 </div>
@@ -1651,35 +1574,14 @@
         <div class="top-section">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg/1200px-El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg" alt="The Third of May 1808" class="artwork-image">
+                
             </div>
             <div class="artwork-header">
-                <h1 class="artwork-title">
-                    <span class="number">9.</span>
-                    
-                    
-                    
-                        
-                            <span class="title-main">The</span>
-                        
-                    
-                        
-                            <span class="title-main">Third</span>
-                        
-                    
-                        
-                            <span class="title-main">of</span>
-                        
-                    
-                        
-                            <span class="title-highlight">May</span>
-                        
-                    
-                        
-                            <span class="title-main">1808</span>
-                        
-                    
-                </h1>
+                
+                <h1 class="artwork-title">9. The Third of May 1808</h1>
+                
                 <p class="artist-info">by Francisco Goya (1746-1828)</p>
+                
                 <div class="location-box">
                     <strong>Location:</strong> Room 64 - First Floor
                 </div>
@@ -1826,31 +1728,14 @@
         <div class="top-section">
             <div class="image-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg/1200px-Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg" alt="Saturn Devouring His Son" class="artwork-image">
+                
             </div>
             <div class="artwork-header">
-                <h1 class="artwork-title">
-                    <span class="number">10.</span>
-                    
-                    
-                    
-                        
-                            <span class="title-main">Saturn</span>
-                        
-                    
-                        
-                            <span class="title-main">Devouring</span>
-                        
-                    
-                        
-                            <span class="title-highlight">His</span>
-                        
-                    
-                        
-                            <span class="title-main">Son</span>
-                        
-                    
-                </h1>
+                
+                <h1 class="artwork-title">10. Saturn Devouring His Son</h1>
+                
                 <p class="artist-info">by Francisco Goya (1746-1828)</p>
+                
                 <div class="location-box">
                     <strong>Location:</strong> Room 67 - First Floor (Black Paintings section)
                 </div>

@@ -251,6 +251,72 @@
             background-color: white;
         }
 
+        /* Phone Styles (screen only; print layout is unchanged) */
+        @media screen and (max-width: 640px) {
+            body {
+                font-size: 15px;
+            }
+
+            .cover-page h1 {
+                font-size: 2.5rem;
+                padding: 0 1rem;
+            }
+
+            .cover-page h2 {
+                font-size: 1.4rem;
+            }
+
+            .artwork-page {
+                padding: 1rem;
+                min-height: 0;
+                border-bottom: 6px solid #f3f4f6;
+            }
+
+            .top-section {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .artwork-image {
+                max-height: 260px;
+                max-width: 100%;
+            }
+
+            .image-credit {
+                max-width: none;
+            }
+
+            .artwork-title {
+                font-size: 1.9rem;
+            }
+
+            .artist-info,
+            .location-box {
+                font-size: 1rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                font-size: 1rem;
+            }
+
+            .section-emoji {
+                font-size: 1.1rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .section li,
+            .checkbox-item {
+                font-size: 0.95rem;
+            }
+        }
+
         /* Print Styles */
         @media print {
             body {

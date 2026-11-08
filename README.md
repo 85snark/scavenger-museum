@@ -82,6 +82,17 @@ python generate_guide.py --json data/my_museum.json --template my_template.html 
 python generate_guide.py --help
 ```
 
+## Viewing on Phones and Other Devices
+
+Guides adapt to phone screens (single column) while printing stays the same. Each run of the generator also refreshes `output/index.html`, a list of all generated guides.
+
+To serve them to other devices, for example over a private network like Tailscale:
+```bash
+python3 -m http.server 8080 --directory output --bind 127.0.0.1
+tailscale serve --bg 8080   # then open https://<your-machine>.<your-tailnet>.ts.net/
+```
+The serving machine must stay awake (`caffeinate -d` on macOS). Images load from Wikimedia, so phones need a data connection.
+
 ## Printing
 
 1. Open any generated HTML file from `output/` in your web browser

@@ -5,8 +5,54 @@ Generates a standalone, printable HTML guide from JSON data and a Jinja2 templat
 """
 
 import json
+from html import escape
 from jinja2 import Template
 from pathlib import Path
+
+
+INDEX_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Guides</title>
+    <style>
+        body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; margin: 0;
+               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: #1f2937; }}
+        main {{ max-width: 560px; margin: 0 auto; padding: 2.5rem 1rem; }}
+        h1 {{ color: white; font-size: 2.2rem; margin: 0 0 1.5rem; }}
+        a {{ display: block; background: white; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 0.75rem;
+            text-decoration: none; color: inherit; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }}
+        a strong {{ display: block; font-size: 1.2rem; color: #8B0000; }}
+        a span {{ font-size: 0.9rem; color: #6b7280; }}
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Museum Guides</h1>
+{links}
+    </main>
+</body>
+</html>
+"""
+
+
+def write_index(output_dir='output', data_dir='data'):
+    """Write output/index.html linking every guide that has both a JSON file and generated HTML."""
+    links = []
+    for json_path in sorted(Path(data_dir).glob('*.json')):
+        html_name = f'{json_path.stem}.html'
+        if not (Path(output_dir) / html_name).exists():
+            continue
+        data = load_json(json_path)
+        count = len(data['artworks'])
+        links.append(
+            f'        <a href="{escape(html_name)}"><strong>{escape(data["museum_name"])}</strong>'
+            f'<span>{escape(data["guide_title"])} · {count} stops</span></a>'
+        )
+    index_path = Path(output_dir) / 'index.html'
+    index_path.write_text(INDEX_TEMPLATE.format(links='\n'.join(links)), encoding='utf-8')
+    return index_path
 
 
 def load_json(json_path):
@@ -58,6 +104,11 @@ def generate_guide(json_path='data/prado_artworks.json', template_path='template
     print(f"💾 Saving to {output_path}...")
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html_output)
+
+    # Refresh the guide list (only for guides written to the default output/ folder)
+    if Path(output_path).parent == Path('output'):
+        index_path = write_index()
+        print(f"🗂  Updated guide list: {index_path}")
 
     # Summary
     print("=" * 50)
